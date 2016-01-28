@@ -25,7 +25,7 @@ git push
 
 ## Timeline
 Assignment # | Due date | Status | Person in charge
------------- | -------------
+------------ | ------------- | ------------- | -------------
 1. Proposal | Thursday, February 4, 2016 | Progressing | everyone
 2. UI | | Progressing | Santiago
 3. Database model | | Progressing | everyone
