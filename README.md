@@ -5,7 +5,7 @@ GUI II project repo
 1. Clone the base project:             
 `git clone https://github.com/Bunchhieng/Onsemble.git`
 2. Make sure you create a new branch (based on development/master branch) every time you want to push a new fix or update. This won't be conflicted with everyone:                       
-`git checkout -b your_branch master`
+`git checkout -b your_branch master`                            
 We decided to follow this naming convention for git branch name: your initial + version number. i.e: **bcs_v1**
 3. Add any (files) change to the stage:                   
 `git add .`
@@ -22,3 +22,11 @@ git pull
 git pull origin your_branch
 git push
 ```
+
+## Timeline
+Assignment # | Due date | Status | Person in charge
+------------ | -------------
+1. Proposal | Thursday, February 4, 2016 | Progressing | everyone
+2. UI | | Progressing | Santiago
+3. Database model | | Progressing | everyone
+4. Beta version | | Progressing | everyone
