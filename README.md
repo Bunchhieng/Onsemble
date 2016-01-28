@@ -11,7 +11,7 @@ We decided to follow this naming convention for git branch name: your initial + 
 `git add .`
 4. Then commit your change:                    
 `git commit -m "your comment"`
-5. Push changes to your new branch:
+5. Push changes to your new branch:                     
 `git push -u origin your_branch`
 6. Before we decide to merge with master, you need to `git push` to make sure that the central repo has your current commit.
 7. After you push your code, make sure you pull request in github GUI so everyone knows what you changed.
