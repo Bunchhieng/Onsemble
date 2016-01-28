@@ -2,14 +2,14 @@
 GUI II project repo
 
 ## Easy team workflow
-1. Clone the base project:
+1. Clone the base project:             
 `git clone https://github.com/Bunchhieng/Onsemble.git`
-2. Make sure you create a new branch (based on development/master branch) every time you want to push a new fix or update. This won't be conflicted with everyone:
+2. Make sure you create a new branch (based on development/master branch) every time you want to push a new fix or update. This won't be conflicted with everyone:                       
 `git checkout -b your_branch master`
 We decided to follow this naming convention for git branch name: your initial + version number. i.e: **bcs_v1**
-3. Add any (files) change to the stage:
+3. Add any (files) change to the stage:                   
 `git add .`
-4. Then commit your change:
+4. Then commit your change:                    
 `git commit -m "your comment"`
 5. Push changes to your new branch:
 `git push -u origin your_branch`
