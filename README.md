@@ -30,4 +30,6 @@ Assignment # | Due date | Status | Person in charge
 1. Proposal | Thursday, February 4, 2016 | Progressing | everyone
 2. UI | | Progressing | Santiago
 3. Database model | | Progressing | everyone
-4. Beta version | | Progressing | everyone
+4. Alpha version | | Progressing | everyone
+5. Beta version | | Progressing | everyone
+6. Bug fixes | | Progressing | everyone
