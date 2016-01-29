@@ -1,7 +1,586 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html.no-js(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		meta(name='description', content='')
+		meta(name='author', content='')
+		//if IE
+			meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		title Onsemble
+		// BOOTSTRAP CORE CSS
+		link(href='/bootstrap/css/bootstrap.css', rel='stylesheet')
+		// ION ICONS STYLES
+		link(href='/bootstrap/css/ionicons.css', rel='stylesheet')
+		// FONT AWESOME ICONS STYLES
+		link(href='/bootstrap/css/font-awesome.css', rel='stylesheet')
+		// FANCYBOX POPUP STYLES
+		link(href='/bootstrap/js/source/jquery.fancybox.css', rel='stylesheet')
+		// STYLES FOR VIEWPORT ANIMATION
+		link(href='/bootstrap/css/animations.min.css', rel='stylesheet')
+		// CUSTOM CSS
+		link(href='/bootstrap/css/style-red.css', rel='stylesheet')
+		// HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries
+		// WARNING: Respond.js doesn't exhibit if you view the page via file://
+		//if lt IE 9
+			script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+			script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+	body(data-spy='scroll', data-target='#menu-section')
+		// MENU SECTION START
+		#menu-section.navbar.navbar-inverse.navbar-fixed-top.scroll-me
+			.container
+				.navbar-header
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='#home')
+						| On
+						span.letter-red semble
+				.navbar-collapse.collapse
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href='#home') HOME
+						li
+							a(href='#discover') DISCOVER
+						li
+							a(href='#exhibit') EXHIBIT
+						li
+							a(href='#stats') STATS
+						li
+							a(href='#favorites') FAVORITES
+						li
+							a(href='#team') TEAM
+						li
+							a(href='#contact') CONTACT
+		// MENU SECTION END
+		// HOME SECTION START
+		#home
+			.container
+				.row
+					.col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+						div
+							h1
+								| On
+								span.letter-red semble
+							h2
+								| Immesurable Fanbase, One Stage
+						#carousel-slider.carousel.slide.animate-in(data-ride='carousel', data-anim-type='fade-in-up')
+							.carousel-inner
+								.item.active
+									h3
+										| Instant connections, lasting relationships
+									p
+										| Speedily explore the latest and best of local artists.
+										| Follow their work and their tour as they grow, and never
+										| miss a beat.
+								.item
+									h3
+										| Reaching multitude in one click
+									p
+										| Push your latest video notifications to your fans and
+										| to potential fan base with a simple click of a button.
+										| Make your life easier in one swift action.
+				.row.animate-in(data-anim-type='fade-in-up')
+					.col-sm-6.col-sm-offset-3.col-md-6.col-md-offset-3.col-lg-8.col-lg-offset-2.scroll-me
+						p
+							| Check out your social media
+						.social
+							a.btn.button-custom.btn-custom-one(href='#')
+								i.fa.fa-facebook
+							a.btn.button-custom.btn-custom-one(href='#')
+								i.fa.fa-twitter
+							a.btn.button-custom.btn-custom-one(href='#')
+								i.fa.fa-google-plus
+							a.btn.button-custom.btn-custom-one(href='#')
+								i.fa.fa-linkedin
+							a.btn.button-custom.btn-custom-one(href='#')
+								i.fa.fa-pinterest
+							a.btn.button-custom.btn-custom-one(href='#')
+								i.fa.fa-github
+						a.btn.button-custom.btn-custom-two(href='#stats') See Stats Now
+		// HOME SECTION END
+		// DISCOVER SECTION START
+		section#discover
+			.container
+				.row.text-center.header.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 Discover
+						hr
+				.row.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						//
+							<h2>Full Section</h2>
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.center-block(src='/bootstrap/img/placeholders/700x400.png')
+				.row.pad-bottom.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-6.col-md-6.col-lg-6
+						h2 1/2 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+					.col-xs-12.col-sm-6.col-md-6.col-lg-6
+						h2 1/2 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+				.row.pad-bottom.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						h2 1/3 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						h2 1/3 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						h2 1/3 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+				.row.pad-bottom.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-3.col-md-3.col-lg-3
+						h2 1/4 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+					.col-xs-12.col-sm-3.col-md-3.col-lg-3
+						h2 1/4 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+					.col-xs-12.col-sm-3.col-md-3.col-lg-3
+						h2 1/4 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+					.col-xs-12.col-sm-3.col-md-3.col-lg-3
+						h2 1/4 Section
+						//
+							<p>
+							Morbi mollis lectus et ipsum sollicitudin varius.
+							Aliquam tempus ante placerat,
+							consectetur tellus nec, porttitor nulla.
+							</p>
+						img.img-responsive(src='/bootstrap/img/placeholders/700x400.png')
+		// DISCOVER SECTION END
+		// EXHIBIT SECTION START
+		section#exhibit
+			.container
+				.row.text-center.header.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 Your exhibit
+						hr
+				.row.text-center.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12.pad-bottom
+						.caegories
+							a.active.btn.btn-custom.btn-custom-two.btn-sm(href='#', data-filter='*') Active
+							a.btn.btn-custom.btn-custom-two.btn-sm(href='#', data-filter='.html') Inactive
+							a.btn.btn-custom.btn-custom-two.btn-sm(href='#', data-filter='.css') All
+				#exhibit-div.row.text-center.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4.html
+						.exhibit-wrapper
+							a.fancybox-media(title='Image Title Goes Here', href='/bootstrap/img/portfolio/1.jpg')
+								img.img-responsive.img-rounded(src='/bootstrap/img/portfolio/1.jpg', alt='')
+							h4 Morbi mollis lectus et ipsum
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4.html.css
+						.exhibit-wrapper
+							a.fancybox-media(title='Image Title Goes Here', href='/bootstrap/img/portfolio/2.jpg')
+								img.img-responsive.img-rounded(src='/bootstrap/img/portfolio/2.jpg', alt='')
+							h4 Morbi mollis lectus et ipsum
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4.code.script
+						.exhibit-wrapper
+							a.fancybox-media(title='Image Title Goes Here', href='/bootstrap/img/portfolio/3.jpg')
+								img.img-responsive.img-rounded(src='/bootstrap/img/portfolio/3.jpg', alt='')
+							h4 Morbi mollis lectus et ipsum
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4.html.script
+						.exhibit-wrapper
+							a.fancybox-media(title='Image Title Goes Here', href='/bootstrap/img/portfolio/4.jpg')
+								img.img-responsive.img-rounded(src='/bootstrap/img/portfolio/4.jpg', alt='')
+							h4 Morbi mollis lectus et ipsum
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4.html.code
+						.exhibit-wrapper
+							a.fancybox-media(title='Image Title Goes Here', href='/bootstrap/img/portfolio/5.jpg')
+								img.img-responsive.img-rounded(src='/bootstrap/img/portfolio/5.jpg', alt='')
+							h4 Morbi mollis lectus et ipsum
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4.script
+						.exhibit-wrapper
+							a.fancybox-media(title='Image Title Goes Here', href='/bootstrap/img/portfolio/6.jpg')
+								img.img-responsive.img-rounded(src='/bootstrap/img/portfolio/6.jpg', alt='')
+							h4 Morbi mollis lectus et ipsum
+		// EXHIBIT SECTION END
+		// STATS SECTION START
+		section#stats
+			.container
+				.row.text-center.header.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 Stats
+						hr
+				.row.pad-bottom.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1.col-lg-10.col-lg-offset-1
+						.row.db-padding-btm.db-attached
+							.col-xs-12.col-sm-3.col-md-3.col-lg-3
+								.light-stats
+									.price
+										sup $
+										| 99
+										small per day
+									.type
+										| BASIC
+									ul
+										li
+											i.glyphicon.glyphicon-print
+											| 30+ Accounts
+										li
+											i.glyphicon.glyphicon-time
+											| 150+ Projects
+										li
+											i.glyphicon.glyphicon-trash
+											| Lead Required
+									.stats-footer
+										a.btn.button-custom.btn-custom-one(href='#') PODCAST ORDER
+							.col-xs-12.col-sm-3.col-md-3.col-lg-3
+								.light-stats.popular
+									.price
+										sup $
+										| 199
+										small per month
+									.type
+										| MEDIUM
+									ul
+										li
+											i.glyphicon.glyphicon-print
+											| 30+ Accounts
+										li
+											i.glyphicon.glyphicon-time
+											| 150+ Projects
+										li
+											i.glyphicon.glyphicon-trash
+											| Lead Required
+									.stats-footer
+										a.btn.button-custom.btn-custom-one(href='#') PODCAST ORDER
+							.col-xs-12.col-sm-3.col-md-3.col-lg-3
+								.light-stats
+									.price
+										sup $
+										| 249
+										small per yer
+									.type
+										| ADVANCE
+									ul
+										li
+											i.glyphicon.glyphicon-print
+											| 30+ Accounts
+										li
+											i.glyphicon.glyphicon-time
+											| 150+ Projects
+										li
+											i.glyphicon.glyphicon-trash
+											| Lead Required
+									.stats-footer
+										a.btn.button-custom.btn-custom-one(href='#') PODCAST ORDER
+							.col-xs-12.col-sm-3.col-md-3.col-lg-3
+								.light-stats
+									.price
+										sup $
+										| 599
+										small one time
+									.type
+										| EXTENDED
+									ul
+										li
+											i.glyphicon.glyphicon-print
+											| 30+ Accounts
+										li
+											i.glyphicon.glyphicon-time
+											| 150+ Projects
+										li
+											i.glyphicon.glyphicon-trash
+											| Lead Required
+									.stats-footer
+										a.btn.button-custom.btn-custom-one(href='#') PODCAST ORDER
+				// second row
+				.row.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-11.col-sm-offset-1.col-md-11.col-md-offset-1.col-lg-11.col-lg-offset-1
+						.row.db-padding-btm.db-attached
+							// <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12
+								.light-stats
+									.transbox
+										//
+											<div class="price">
+											<sup>$</sup>99
+											<small>per day</small>
+											</div>
+											<div class="type">
+											SMALL
+											</div>
+											<ul>
+											<li><i class="glyphicon glyphicon-print"></i>30+ Accounts </li>
+											<li><i class="glyphicon glyphicon-time"></i>150+ Projects </li>
+											<li><i class="glyphicon glyphicon-trash"></i>Lead Required</li>
+											</ul>
+											<div class="stats-footer">
+											<a href="#" class="btn button-custom btn-custom-one">PODCAST ORDER</a>
+											</div>
+											</div>
+											</div>
+											<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+											<div class="light-stats popular">
+											<div class="price">
+											<sup>$</sup>159
+											<small>per month</small>
+											</div>
+											<div class="type">
+											MEDIUM
+											</div>
+											<ul>
+											<li><i class="glyphicon glyphicon-print"></i>30+ Accounts </li>
+											<li><i class="glyphicon glyphicon-time"></i>150+ Projects </li>
+											<li><i class="glyphicon glyphicon-trash"></i>Lead Required</li>
+											</ul>
+											<div class="stats-footer">
+											<a href="#" class="btn button-custom btn-custom-one">PODCAST ORDER</a>
+											</div>
+											</div>
+											</div>
+											<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+											<div class="light-stats">
+											<div class="price">
+											<sup>$</sup>799
+											<small>per month</small>
+											</div>
+											<div class="type">
+											ADVANCE
+											</div>
+											<ul>
+											<li><i class="glyphicon glyphicon-print"></i>30+ Accounts </li>
+											<li><i class="glyphicon glyphicon-time"></i>150+ Projects </li>
+											<li><i class="glyphicon glyphicon-trash"></i>Lead Required</li>
+											</ul>
+											<div class="stats-footer">
+											<a href="#" class="btn button-custom btn-custom-one">PODCAST ORDER</a>
+											</div>
+											</div>
+										#mySVG
+		// STATS SECTION END
+		// FAVORITES SECTION START
+		section#favorites
+			.container
+				.row.text-center.header
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12.animate-in(data-anim-type='fade-in-up')
+						h3 Your favorites
+						hr
+				.row.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-document
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-scissors
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-clipboard
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-calendar
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-erlenmeyer-flask
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-monitor
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-pinpoint
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-tshirt-outline
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.favorites-wrapper
+							i.ion-speedometer
+							h3 Consectetur tellus nec
+							| 						Morbi mollis lectus et ipsum sollicitudin varius.
+							| 						Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+		// FAVORITES SECTION END
+		// TEAM SECTION START
+		section#team
+			.container
+				.row.text-center.header.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 Team Members 
+						hr
+				.row.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-3.col-md-3.col-lg-3
+						.team-wrapper
+							.team-inner(style="background-image: url('/bootstrap/img/team/santi.jpg')")
+								a(href='#', target='_blank')
+									i.fa.fa-twitter
+							.description
+								h3 Santiago Paredes
+								h5
+									strong  Developer & Designer 
+								p
+									| Pellentesque elementum dapibus convallis.
+									| Vivamus eget finibus massa.
+					.col-xs-12.col-sm-3.col-md-3.col-lg-3
+						.team-wrapper
+							.team-inner(style="background-image: url('/bootstrap/img/team/justin.jpg')")
+								a(href='#', target='_blank')
+									i.fa.fa-twitter
+							.description
+								h3  Justin Nguyen
+								h5
+									strong  Developer & Designer 
+								p
+									| Pellentesque elementum dapibus convallis.
+									| Vivamus eget finibus massa.
+					.col-xs-12.col-sm-3.col-md-3.col-lg-3
+						.team-wrapper
+							.team-inner(style="background-image: url('/bootstrap/img/team/bun.jpg')")
+								a(href='#', target='_blank')
+									i.fa.fa-twitter
+							.description
+								h3  Bunchhieng Soth
+								h5
+									strong  Developer & Designer 
+								p
+									| Pellentesque elementum dapibus convallis.
+									| Vivamus eget finibus massa.
+					.col-xs-12.col-sm-3.col-md-3.col-lg-3
+						.team-wrapper
+							.team-inner(style="background-image: url('/bootstrap/img/team/tak.jpg')")
+								a(href='#', target='_blank')
+									i.fa.fa-twitter
+							.description
+								h3  Takyiu Lo
+								h5
+									strong  Developer & Designer 
+								p
+									| Pellentesque elementum dapibus convallis.
+									| Vivamus eget finibus massa.
+		// TEAM SECTION END
+		// CONTACT SECTION START
+		section#contact
+			.container
+				.row.text-center.header.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-12.col-md-12.col-lg-12
+						h3 Contact Details 
+						hr
+				.row.animate-in(data-anim-type='fade-in-up')
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.contact-wrapper
+							h3 We Are Social
+							p
+								| Aliquam tempus ante placerat,
+								| consectetur tellus nec, porttitor nulla.
+							.social-below
+								a.btn.button-custom.btn-custom-two(href='#')  Facebook
+								a.btn.button-custom.btn-custom-two(href='#')  Twitter
+								a.btn.button-custom.btn-custom-two(href='#')  Google +
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.contact-wrapper
+							h3 Quick Contact
+							h4
+								strong Email : 
+								|  info@yuordomain.com
+							h4
+								strong Call : 
+								|  +09-88-99-77-55
+							h4
+								strong Skype : 
+								|  Yujhaeu78
+					.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						.contact-wrapper
+							h3 Address : 
+							h4 230/45 , New way Lane , 
+							h4 United States
+							.footer-div
+								| © 2015 Onsemble 
+								a(href='http://www.designbootstrap.com/', target='_blank') by DesignBootstrp
+		// CONTACT SECTION END
+		// JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME
+		// CORE JQUERY
+		script(src='/bootstrap/js/jquery-1.11.1.js')
+		// BOOTSTRAP SCRIPTS
+		script(src='/bootstrap/js/bootstrap.js')
+		// EASING SCROLL SCRIPTS PLUGIN
+		script(src='/bootstrap/js/vegas/jquery.vegas.min.js')
+		// VEGAS SLIDESHOW SCRIPTS
+		script(src='/bootstrap/js/jquery.easing.min.js')
+		// FANCYBOX PLUGIN
+		script(src='/bootstrap/js/source/jquery.fancybox.js')
+		// ISOTOPE SCRIPTS
+		script(src='/bootstrap/js/jquery.isotope.js')
+		// VIEWPORT ANIMATION SCRIPTS
+		script(src='/bootstrap/js/appear.min.js')
+		script(src='/bootstrap/js/animations.min.js')
+		// D3 JS GRAPHING SCRIPTS
+		script(src='/bootstrap/js/d3.min.js')
+		script(src='/bootstrap/js/queue.v1.min.js')
+		script(src='/bootstrap/js/topojson.v1.min.js')
+		script(src='/bootstrap/js/d3-heatmap.js')
+		// CUSTOM SCRIPTS
+		script(src='/bootstrap/js/custom.js')
