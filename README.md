@@ -1,6 +1,10 @@
 ## Onsemble
 GUI II project repo
 
+## How to work on this project
+1. `git clone https://github.com/Bunchhieng/Onsemble.git`
+2. `npm install` to install all modules in package.json
+
 ## Easy team workflow
 #### **Please make sure you read this instruction before you push any changes.**
 1. Clone the base project:             
