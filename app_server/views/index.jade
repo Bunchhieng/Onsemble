@@ -1,5 +1,103 @@
-extends layout
+extend layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  body(data-spy='scroll', data-target='#menu-section')
+    // Navigation Bar
+    #menu-section.navbar.navbar-inverse.navbar-fixed-top.scroll-me
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+          |                 
+          a.pull-left(href='#home')
+            img.navbar-logo(src='img/Onsemble.png')
+        |             
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#home') HOME
+            |                     
+            li
+              a(href='#discover') DISCOVER
+            // <li><a href="#stage">STAGE</a></li>
+            // <li><a href="#contact">CONTACT</a></li>
+    // Navigation End
+    // Home
+    #home
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+            div
+              h1.title
+                img.onsemble-logo(src='img/Onsemble.png')
+                span.onsemble-grey n
+                span.onsemble-green semble
+              |                         
+              h2
+                | One Stage, Immesurable Fanbase
+            |                     
+            #carousel-slider.carousel.slide.animate-in(data-ride='carousel', data-anim-type='fade-in-up')
+              .carousel-inner
+                .item.active
+                  h3 Instant connections, lasting relationships
+                  |                                 
+                  p
+                    | Speedily explore the latest and best of local artists. Follow their work and their tour as they grow, and never miss a beat.
+                |                             
+                .item
+                  h3 Reaching multitude in one click
+                  |                                 
+                  p
+                    | Push your latest video notifications to your fans and to potential fan base with a simple click of a button. Make your life
+                    | easier in one swift action.
+        |             
+        .col-sm-6.col-sm-offset-3.col-md-6.col-md-offset-3.col-lg-8.col-lg-offset-2.scroll-me
+          a.btn.button-social-textbox.btn-social-textbox(href='#signup') Sign up now!
+        //
+          <div class="row animate-in" data-anim-type="fade-in-up">
+          <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2 scroll-me">
+          <p>
+          Check out our social media
+          </p>
+          <div class="social">
+          <a href="#" class="btn button-social btn-social-box "><i class="fa fa-facebook "></i></a>
+          <a href="#" class="btn button-social btn-social-box "><i class="fa fa-twitter"></i></a>
+          <a href="#" class="btn button-social btn-social-box "><i class="fa fa-google-plus "></i></a>
+          <a href="#" class="btn button-social btn-social-box "><i class="fa fa-linkedin "></i></a>
+          <a href="#" class="btn button-social btn-social-box "><i class="fa fa-github "></i></a>
+          </div>
+          <a href="#signup" class=" btn button-social-textbox btn-social-textbox">Sign up now!</a>
+          </div>
+          </div>
+    // Home End
+    // JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME
+    // CORE JQUERY
+    script(src='js/jquery-1.11.1.js')
+    // BOOTSTRAP SCRIPTS
+    script(src='js/bootstrap.js')
+    // EASING SCROLL SCRIPTS PLUGIN
+    script(src='js/vegas/jquery.vegas.min.js')
+    // VEGAS SLIDESHOW SCRIPTS
+    script(src='js/jquery.easing.min.js')
+    // FANCYBOX PLUGIN
+    script(src='js/source/jquery.fancybox.js')
+    // ISOTOPE SCRIPTS
+    script(src='js/jquery.isotope.js')
+    // VIEWPORT ANIMATION SCRIPTS
+    script(src='js/appear.min.js')
+    |     
+    script(src='js/animations.min.js')
+    // D3 JS GRAPHING SCRIPTS
+    script(src='js/d3.min.js')
+    |     
+    script(src='js/queue.v1.min.js')
+    |     
+    script(src='js/topojson.v1.min.js')
+    |     
+    script(src='js/d3-heatmap.js')
+    // CUSTOM SCRIPTS
+    script(src='js/custom.js')

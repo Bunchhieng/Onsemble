@@ -1,7 +1,26 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    //if IE
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    link(rel='icon', type='image/png', href='img/Onsemble.png')
+    title Onsemble
+    // BOOTSTRAP CORE CSS
+    link(href='css/bootstrap.css', rel='stylesheet')
+    // ION ICONS STYLES
+    link(href='css/ionicons.css', rel='stylesheet')
+    // FONT AWESOME ICONS STYLES
+    link(href='css/font-awesome.css', rel='stylesheet')
+    // FANCYBOX POPUP STYLES
+    link(href='js/source/jquery.fancybox.css', rel='stylesheet')
+    // STYLES FOR VIEWPORT ANIMATION
+    link(href='css/animations.min.css', rel='stylesheet')
+    // CUSTOM CSS
+    link(href='css/style-red.css', rel='stylesheet')
+    link(href='css/main.css', rel='stylesheet')
   body
     block content
