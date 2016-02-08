@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var mainCtrl = require('../controllers/main');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+/* Locations pages */
+router.get('/', mainCtrl.homelist);
+router.get('/discover', mainCtrl.discoverPage);
+router.get('/stage', mainCtrl.stagePage);
+
+/* Other pages */
+/*router.get('/about', ctrlOthers.about);*/
 
 module.exports = router;

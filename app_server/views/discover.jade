@@ -1,0 +1,71 @@
+extend layout
+
+block content
+  body(data-spy='scroll', data-target='#menu-section')
+    // Navigation Bar
+    #menu-section.navbar.navbar-inverse.navbar-fixed-top.scroll-me
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+          |                 
+          a.pull-left(href='#home')
+            img.navbar-logo(src='img/Onsemble.png')
+        |             
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#home') HOME
+            |                          
+            li
+              a(href='#discover') DISCOVER
+            |                     
+            li
+              a(href='#stage') STAGE
+            // <li><a href="#contact">CONTACT</a></li>
+    // Navigation End
+    // Discover Page
+    div(id='discover bg-onsemble-green')
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+            div
+              h1.title
+                img.onsemble-logo(src='img/Onsemble.png')
+                span.onsemble-grey n
+                span.onsemble-green semble
+              |                         
+              h2
+                | One Stage, Immesurable Fanbase
+    // Discover End
+    // JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME
+    // CORE JQUERY
+    script(src='public/js/jquery-1.11.1.js')
+    // BOOTSTRAP SCRIPTS
+    script(src='public/js/bootstrap.js')
+    // EASING SCROLL SCRIPTS PLUGIN
+    script(src='public/js/vegas/jquery.vegas.min.js')
+    // VEGAS SLIDESHOW SCRIPTS
+    script(src='public/js/jquery.easing.min.js')
+    // FANCYBOX PLUGIN
+    script(src='public/js/source/jquery.fancybox.js')
+    // ISOTOPE SCRIPTS
+    script(src='public/js/jquery.isotope.js')
+    // VIEWPORT ANIMATION SCRIPTS
+    script(src='public/js/appear.min.js')
+    |     
+    script(src='public/js/animations.min.js')
+    // D3 JS GRAPHING SCRIPTS
+    script(src='public/js/d3.min.js')
+    |     
+    script(src='public/js/queue.v1.min.js')
+    |     
+    script(src='public/js/topojson.v1.min.js')
+    |     
+    script(src='public/js/d3-heatmap.js')
+    // CUSTOM SCRIPTS
+    script(src='public/js/custom.js')
