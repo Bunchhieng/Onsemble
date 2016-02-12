@@ -179,6 +179,10 @@ color: #FFFFFF;
     background-color: #2c2f32;
 }
 
+.bg-onsemble-white {
+    background-color: #FFFFFF;
+}
+
 p.nav-logo {
     font-size: 30px;
     margin-left: 1px;
@@ -202,3 +206,36 @@ iframe {
 #discover-videos {
     padding-bottom: 125px
 }
+
+/*Tabs CSS*/
+tabs-min { 
+    background: transparent; 
+    border: none; 
+} 
+tabs-min .ui-widget-header { 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #c0c0c0; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+tabs-min .ui-tabs-nav .ui-state-default { 
+    background: transparent; 
+    border: none; 
+} 
+tabs-min .ui-tabs-nav .ui-state-active { 
+    background: transparent url(img/uiTabsArrow.png) no-repeat bottom center; 
+    border: none; 
+} 
+tabs-min .ui-tabs-nav .ui-state-default a { 
+    color: #c0c0c0; 
+} 
+tabs-min .ui-tabs-nav .ui-state-active a { 
+    color: #459e00; 
+}
+
+a.discover-tabs {
+    color: #459e00;
+}
+
