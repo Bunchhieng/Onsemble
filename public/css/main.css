@@ -121,6 +121,33 @@ color: #fff;
 
 
 /* Home */
+
+#home h1, #home h2 {
+    text-shadow: 1px 1px 1px #000;
+}
+
+#home h3 {
+    text-shadow: 1px 1px 1px #000;
+}
+
+.item p {
+    text-shadow: 1px 1px 1px #000;
+}
+
+#home {
+    background-image: url('../img/bg-rock.jpg');
+    background-size: cover;
+}
+
+#title-box {
+    padding-top:10px;
+    padding-bottom:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.2);
+}
+
 #carousel-slider p {
 color: #439756;
 font-size: 16px;
@@ -131,6 +158,15 @@ margin: 25px 20px;
 #carousel-slider h3 {
 line-height: 50px;
 color: #FFFFFF;
+}
+
+#carousel-slider {
+    position: relative;
+    margin-top: 30%
+}
+
+.item h3 {
+    margin-bottom: -25px;
 }
 
 /* Contact Page */

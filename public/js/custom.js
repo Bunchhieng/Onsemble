@@ -40,28 +40,28 @@ interval: carousel_delay_time //TIME IN MILLI SECONDS
 });
 
 
-/*====================================
-VEGAS SLIDESHOW SCRIPTS
-======================================*/
-$.vegas('slideshow', {
-	backgrounds: [
-	//{ src: 'assets/img/rock-concert.jpg', fade: 1000, delay: background_delay_time }, // sparedes
-	//{ src: 'assets/img/concert.jpg', fade: 1000, delay: background_delay_time },
-	{ src: '../img/bg-rock.jpg', fade: 1000, delay: background_delay_time },
-	//{ src: 'assets/img/guitar.jpg', fade: 1000, delay: background_delay_time },
-	]
-});
-
-// Fix the shudder effect
+// /*====================================
+// VEGAS SLIDESHOW SCRIPTS
+// ======================================*/
 // $.vegas('slideshow', {
-// backgrounds: [
-// { src: 'assets/img/1.jpg', fade: 1000, delay: 9000 },
-// { src: 'assets/img/2.jpg', fade: 1000, delay: 9000 },
-// ]
-// })('overlay', {
-// /** SLIDESHOW OVERLAY IMAGE **/
-// src: 'assets/js/vegas/overlays/06.png' // THERE ARE TOTAL 01 TO 15 .png IMAGES AT THE PATH GIVEN, WHICH YOU CAN USE HERE
+// 	backgrounds: [
+// 	//{ src: 'assets/img/rock-concert.jpg', fade: 1000, delay: background_delay_time }, // sparedes
+// 	//{ src: 'assets/img/concert.jpg', fade: 1000, delay: background_delay_time },
+// 	{ src: '../img/bg-rock.jpg', fade: 1000, delay: background_delay_time },
+// 	//{ src: 'assets/img/guitar.jpg', fade: 1000, delay: background_delay_time },
+// 	]
 // });
+
+// // Fix the shudder effect
+// // $.vegas('slideshow', {
+// // backgrounds: [
+// // { src: 'assets/img/1.jpg', fade: 1000, delay: 9000 },
+// // { src: 'assets/img/2.jpg', fade: 1000, delay: 9000 },
+// // ]
+// // })('overlay', {
+// // /** SLIDESHOW OVERLAY IMAGE **/
+// // src: 'assets/js/vegas/overlays/06.png' // THERE ARE TOTAL 01 TO 15 .png IMAGES AT THE PATH GIVEN, WHICH YOU CAN USE HERE
+// // });
 
 
 /*====================================
