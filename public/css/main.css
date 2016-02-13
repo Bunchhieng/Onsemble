@@ -183,6 +183,11 @@ color: #FFFFFF;
     background-color: #FFFFFF;
 }
 
+.bg-green-pattern {
+    background-image: url(../img/pattern.png);
+    background-size: cover;
+}
+
 p.nav-logo {
     font-size: 30px;
     margin-left: 1px;
@@ -238,4 +243,10 @@ tabs-min .ui-tabs-nav .ui-state-active a {
 a.discover-tabs {
     color: #459e00;
 }
+
+.discover-nav > li > a {
+    padding: 5px 40px 5px 40px;
+}
+
+
 
