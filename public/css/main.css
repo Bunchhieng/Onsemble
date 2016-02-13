@@ -1,0 +1,277 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Candal);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+html,body {
+    font-family: 'Josefins Sans', sans-serif;
+}
+
+/* Primary Colors */
+.onsemble-green {
+    color:#439756;
+}
+
+.onsemble-grey {
+    color: #2c2f32;
+}
+
+.font-white {
+    color: #FFFFFF;
+}
+
+.bg-blk {
+    background-color: #222;
+}
+
+h1.title {
+    font-size: 80pt;
+    font-family: 'Candal', sans-serif;
+}
+
+.onsemble-logo {
+    max-width: 100pt;
+    margin-top: -65px;
+}
+
+/* Navigation Bar */
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+/*background-color: transparent;*/
+border-bottom: 1px solid #FFFFFF;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+/*background-color: transparent;*/
+border-bottom: 1px solid #439756;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+background-color: #439756;
+}
+.navbar-inverse .navbar-toggle {
+border-color: #439756;
+}
+
+.navbar-logo {
+    max-width:50px;
+}
+
+/* Button CSS */
+.button-social {
+border-radius: 0px;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+margin: 25px 5px 5px 0px;
+margin: 5px;
+}
+
+.btn-social-box {
+background-color: transparent;
+color: #FFFFFF;
+border: 2px solid #439756;
+}
+
+.btn-social-box:hover {
+background-color: #2c2f32;
+text-decoration: none;
+color: #FFFFFF;
+}
+
+.btn-social-textbox {
+color: #FFFFFF;
+background-color: #439756;
+border: 2px solid #439756;
+}
+
+.btn-social-textbox:hover {
+border: 2px solid #439756;
+text-decoration: none;
+color: #2c2f32;
+/*background-color: transparent;*/
+}
+
+.button-onsemble {
+border-radius: 0px;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+margin: 25px 5px 5px 0px;
+margin: 5px;
+}
+
+.btn-onsemble {
+background-color: transparent;
+color: #fff;
+border: 2px solid #439756;
+}
+
+.btn-onsemble:hover {
+background-color: #439756;
+text-decoration: none;
+color: #fff;
+}
+
+
+
+/* Home */
+
+#home h1, #home h2 {
+    text-shadow: 1px 1px 1px #000;
+}
+
+#home h3 {
+    text-shadow: 1px 1px 1px #000;
+}
+
+.item p {
+    text-shadow: 1px 1px 1px #000;
+}
+
+#home {
+    background-image: url('../img/bg-rock.jpg');
+    background-size: cover;
+}
+
+#title-box {
+    padding-top:10px;
+    padding-bottom:10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background:rgba(0,0,0,0.2);
+}
+
+#carousel-slider p {
+color: #439756;
+font-size: 16px;
+line-height: 25px;
+margin: 25px 20px;
+}
+
+#carousel-slider h3 {
+line-height: 50px;
+color: #FFFFFF;
+}
+
+#carousel-slider {
+    position: relative;
+    margin-top: 30%
+}
+
+.item h3 {
+    margin-bottom: -25px;
+}
+
+/* Contact Page */
+.team-members {
+    width: 100px;
+	height: 100px;
+	border-radius: 200px;
+}
+
+.pad-bot {
+    padding-bottom: 50px;
+}
+
+.bg-contact {
+    color: #FFFFFF;
+    background-image: url('../img/concert.jpg');
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding-bottom: 225px;
+}
+
+.bg-footer {
+    background-color: #2c2f32;
+    padding-bottom: 50px;
+}
+
+.title {
+    font-size: 80pt;
+}
+
+.title-discover {
+    font-size: 70pt;
+    padding-top: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+}
+
+/*Discover Page CSS*/
+.bg-onsemble-green {
+    background-color: #439756;
+}
+.bg-onsemble-grey {
+    background-color: #2c2f32;
+}
+
+.bg-onsemble-white {
+    background-color: #FFFFFF;
+}
+
+p.nav-logo {
+    font-size: 30px;
+    margin-left: 1px;
+    margin-top: 15px;
+    margin-bottom: -20px;
+}
+
+iframe {
+    padding: 40px;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+#discover {
+    padding-bottom: 40px;
+}
+
+#discover-videos {
+    padding-bottom: 125px
+}
+
+/*Tabs CSS*/
+tabs-min { 
+    background: transparent; 
+    border: none; 
+} 
+tabs-min .ui-widget-header { 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #c0c0c0; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+tabs-min .ui-tabs-nav .ui-state-default { 
+    background: transparent; 
+    border: none; 
+} 
+tabs-min .ui-tabs-nav .ui-state-active { 
+    background: transparent url(img/uiTabsArrow.png) no-repeat bottom center; 
+    border: none; 
+} 
+tabs-min .ui-tabs-nav .ui-state-default a { 
+    color: #c0c0c0; 
+} 
+tabs-min .ui-tabs-nav .ui-state-active a { 
+    color: #459e00; 
+}
+
+a.discover-tabs {
+    color: #459e00;
+}
+
