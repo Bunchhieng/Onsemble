@@ -20,6 +20,10 @@ html,body {
     color: #FFFFFF;
 }
 
+.font-black {
+    color: #222;
+}
+
 .bg-blk {
     background-color: #222;
 }
@@ -219,6 +223,11 @@ color: #FFFFFF;
     background-color: #FFFFFF;
 }
 
+.bg-green-pattern {
+    background-image: url(../img/pattern.png);
+    background-size: cover;
+}
+
 p.nav-logo {
     font-size: 30px;
     margin-left: 1px;
@@ -274,4 +283,44 @@ tabs-min .ui-tabs-nav .ui-state-active a {
 a.discover-tabs {
     color: #459e00;
 }
+
+.discover-nav > li > a {
+    padding: 5px 40px 5px 40px;
+}
+
+/*Stage CSS*/
+.step-on-stage {
+    border: black 1px solid;
+    padding: 30px;
+    margin: 50px;
+}
+
+.profile-pic {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;
+    /*position: absolute;*/
+}
+
+#profile-info {
+    color: #222;
+    font-size: 24px;
+    padding: 30px 0px 30px 0px;
+}
+
+#rct-rles {
+    font-size: 30px;
+}
+
+h2.spotlight-title {
+    color: #222;
+    font-size: 50px;    
+}
+
+.title-stage {
+    text-shadow: 1px 1px #FFFFFF;
+    font-size: 70pt;
+    padding-top: 50px;
+}
+
 
