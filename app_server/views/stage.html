@@ -12,7 +12,7 @@
         Last Updated: February 14, 2016
         -->
     <link rel="icon" type="image/png" href="img/Onsemble.png" />
-    <title>Discover - Onsemble</title>
+    <title>Stage - Onsemble</title>
     <!-- Bootstrap CSS -->
     <link href="../../public/css/bootstrap.css" rel="stylesheet" />
     <!-- Ion Icon Styles CSS-->
@@ -31,7 +31,7 @@
 
 <body data-spy="scroll" data-target="#menu-section">
     <!--Navigation Bar-->
-    <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section">
+    <div class="navbar navbar-inverse navbar-fixed-top scroll-me onsemble-grey" id="menu-section">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -54,7 +54,7 @@
     </div>
     <!--Navigation End-->
     <!--Discover-->
-    <div id="stage" class='bg-green-pattern'>
+    <!--<div id="stage" class='bg-green-pattern'>
         <div class="container-fluid">
             <div class="row">
                 <div>
@@ -62,44 +62,46 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
+    <div id="stage">
     <!--Home End-->
     <section id="stage-profile" class="container-fluid step-on-stage">
         <div class="col-md-4">
-            <div class="container-fluid">
+            <div id="pro-pic"class="container-fluid">
                 <img src="../../public/img/team/santi.jpg" class="profile-pic" />
             </div>
         </div>
         <div id="profile-info" class="col-md-4">
-        	<dl class='dl-horizontal lead'>
-                        <dt>Name:</dt>
-                        <dd>Santiago Paredes</dd>
-                        <dt>Location:</dt>
-                        <dd>Lowell, MA</dd>
-                        <dt>Genre:</dt>
-                        <dd>Folk</dd>
-                    </dl>
+            <dl class='dl-horizontal lead font-white'>
+                <dt>Name:</dt>
+                <dd>Santiago Paredes</dd>
+                <dt>Location:</dt>
+                <dd>Lowell, MA</dd>
+                <dt>Genre:</dt>
+                <dd>Folk</dd>
+            </dl>
         </div>
         <div id="spotlight" class="col-md-4">
-        	<h2 class="spotlight-title text-center">Spotlight</h2>
-        	<iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+            <h2 class="spotlight-title text-center font-white">Spotlight</h2>
+            <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
-
-    <div class='container-fluid'>        
-        <div class="text-center">
-            <h3 id="rct-rles" class="font-black">Recent Releases</h3>
-            <div class='col-lg-4 col-md-4'>
-                <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class='col-lg-4 col-md-4'>
-                <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class='col-lg-4 col-md-4'>
-                <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+    <section id="releases">
+        <div class='container-fluid'>
+            <div class="text-center">
+                <h3 id="rct-rles" class="font-black">Recent Releases</h3>
+                <div class='col-lg-4 col-md-4'>
+                    <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class='col-lg-4 col-md-4'>
+                    <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class='col-lg-4 col-md-4'>
+                    <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class='container-fluid bg-blk'>
         <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
             <div class="social">
@@ -110,6 +112,7 @@
             </div>
         </div>
     </div>
+</div>
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME -->
     <!-- CORE JQUERY -->
     <script src="../../public/js/jquery-1.11.1.js"></script>
