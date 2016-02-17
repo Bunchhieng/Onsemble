@@ -56,6 +56,10 @@ border-color: #439756;
     max-width:50px;
 }
 
+.navbar-inverse .navbar-text {
+    color: #FFFFFF;
+}
+
 /* Button CSS */
 .button-social {
 border-radius: 0px;
@@ -121,7 +125,6 @@ color: #fff;
 
 
 /* Home */
-
 #home h1, #home h2 {
     text-shadow: 1px 1px 1px #000;
 }
@@ -208,9 +211,17 @@ color: #FFFFFF;
 }
 
 /*Discover Page CSS*/
-.bg-onsemble-green {
-    background-color: #439756;
+.bg-onsemble-green { /* Need to make this it's own class */
+    /*background-color: #439756;*/
+    background: url('../img/pattern.png') bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: linear-gradient(#439756);
+    background-color: -webkit-linear-gradient('right', #439756);
 }
+
 .bg-onsemble-grey {
     background-color: #2c2f32;
 }
@@ -219,11 +230,21 @@ color: #FFFFFF;
     background-color: #FFFFFF;
 }
 
+h1.title-discover {
+    text-shadow: 1px 1px 1px #000;
+}
+
 p.nav-logo {
     font-size: 30px;
     margin-left: 1px;
     margin-top: 15px;
     margin-bottom: -20px;
+    font-family: 'Candal', sans-serif;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#discover-videos {
+    background: url('../img/footer_lodyas.png') repeat;
 }
 
 iframe {
