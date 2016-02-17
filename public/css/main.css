@@ -238,6 +238,7 @@ color: #FFFFFF;
     background-color: #FFFFFF;
 }
 
+<<<<<<< HEAD
 .bg-green-pattern {
     background-image: url(../img/pattern.png);
     background-size: cover;
@@ -245,8 +246,12 @@ color: #FFFFFF;
 
 h1.title-discover {
     text-shadow: 1px 1px 1px #000;
-
 }
+/*=======
+h1.title-discover {
+    text-shadow: 1px 1px 1px #000;
+>>>>>>> scp_v2
+}*/
 
 p.nav-logo {
     font-size: 30px;
