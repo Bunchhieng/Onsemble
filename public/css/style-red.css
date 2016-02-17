@@ -121,10 +121,6 @@ font-weight: 900;
 font-family: 'Oswald', sans-serif;
 }
 
-.letter-red {
-	color: rgb(228, 79, 79); /* used in the navbar to redden "semble" in "Onsemble"*/
-}
-
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
 border-color: transparent;
 }
