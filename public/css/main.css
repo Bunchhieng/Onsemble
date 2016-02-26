@@ -146,7 +146,7 @@ color: #fff;
     background-size: cover;
 }
 
-#title-box {
+.title-box {
     padding-top:10px;
     padding-bottom:10px;
     -webkit-border-radius: 10px;

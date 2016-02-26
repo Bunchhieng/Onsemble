@@ -54,11 +54,10 @@ body {
     /* W3C */
 }
 
-
-/*Note for JNN: comment-out body background image to see gradient*/
-
 body {
-    background: url('../img/pattern.png');
+    background: url('../img/guitar-wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ul {
