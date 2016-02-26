@@ -66,13 +66,11 @@
     <div id="stage">
     <!--Home End-->
     <section id="stage-profile" class="container-fluid step-on-stage">
-        <div class="col-md-4">
-            <div id="pro-pic"class="container-fluid">
-                <img src="../../public/img/team/santi.jpg" class="profile-pic" />
-            </div>
-        </div>
-        <div id="profile-info" class="col-md-4">
-            <dl class='dl-horizontal lead font-white'>
+        <div class="col-md-6">
+                <img src="../../public/img/team/santi.jpg" id="pro-pic" class="profile-pic">
+ 
+        <!--<div id="profile-info" >-->
+            <dl id="profile-info" class='dl-horizontal lead font-white'>
                 <dt>Name:</dt>
                 <dd>Santiago Paredes</dd>
                 <dt>Location:</dt>
@@ -80,14 +78,17 @@
                 <dt>Genre:</dt>
                 <dd>Folk</dd>
             </dl>
-        </div>
-        <div id="spotlight" class="col-md-4">
+        <!--</div>-->
+                 </div>
+        <div id="spotlight" class="col-md-6">
             <h2 class="spotlight-title text-center font-white">Spotlight</h2>
-            <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+            <div class="text-center">
+            <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="450" height="300" frameborder="0" allowfullscreen></iframe>
+        </div>
         </div>
     </section>
-    <section id="releases">
-        <div class='container-fluid'>
+    <section id="releases" class='container-fluid'>
+        <div>
             <div class="text-center">
                 <h3 id="rct-rles" class="font-black">Recent Releases</h3>
                 <div class='col-lg-4 col-md-4'>
@@ -116,8 +117,6 @@
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME -->
     <!-- CORE JQUERY -->
     <script src="../../public/js/jquery-1.11.1.js"></script>
-    <script src='../../public/js/jquery-ui.js'></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!-- BOOTSTRAP SCRIPTS -->
     <script src="../../public/js/bootstrap.js"></script>
     <!-- EASING SCROLL SCRIPTS PLUGIN -->
@@ -131,11 +130,7 @@
     <!-- VIEWPORT ANIMATION SCRIPTS   -->
     <script src="../../public/js/appear.min.js"></script>
     <script src="../../public/js/animations.min.js"></script>
-    <!-- D3 JS GRAPHING SCRIPTS -->
-    <script src="../../public/js/d3.min.js"></script>
-    <script src="../../public/js/queue.v1.min.js"></script>
-    <script src="../../public/js/topojson.v1.min.js"></script>
-    <script src="../../public/js/d3-heatmap.js"></script>
+    
     <!-- CUSTOM SCRIPTS -->
     <script src="../../public/js/main.js"></script>
     <!--<script src="js/custom.js"></script>-->

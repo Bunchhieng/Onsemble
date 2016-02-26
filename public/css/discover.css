@@ -1,15 +1,18 @@
 /* Fonts */
+
 @import url(https://fonts.googleapis.com/css?family=Candal);
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
-
-html,body {
+html,
+body {
     font-family: 'Josefins Sans', sans-serif;
 }
 
+
 /* Primary Colors */
+
 .onsemble-green {
-    color:#439756;
+    color: #439756;
 }
 
 .onsemble-grey {
@@ -39,21 +42,28 @@ h1.title {
 }
 
 body {
-  background: -webkit-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%); /* W3C */   
+    background: -webkit-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%);
+    /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%);
+    /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%);
+    /* IE10 */
+    background: -o-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%);
+    /* Opera 11.10+ */
+    background: linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%);
+    /* W3C */
 }
 
+
 /*Note for JNN: comment-out body background image to see gradient*/
+
 body {
     background: url('../img/pattern.png');
 }
 
 ul {
-  list-style: none;
-  padding: 0
+    list-style: none;
+    padding: 0
 }
 
 a {
@@ -69,166 +79,173 @@ a:hover .fa {
     color: #439756;
 }
 
+
 /*************************
 *******Navigation CSS*****
 **************************/
 
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-background-color: transparent;
-border-bottom: 1px solid #FFFFFF;
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    border-bottom: 1px solid #FFFFFF;
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-border-color: transparent;
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    border-color: transparent;
 }
 
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-background-color: #439756;
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #439756;
 }
+
 .navbar-inverse .navbar-toggle {
-border-color: #439756;
+    border-color: #439756;
 }
 
 .navbar-logo {
-    max-width:50px;
+    max-width: 50px;
 }
 
 .navbar-inverse .navbar-text {
     color: #FFFFFF;
 }
 
+
 /*************************
 *******Home Page CSS******
 **************************/
 
-.col-centered{
+.col-centered {
     float: none;
     margin: 0 auto;
 }
 
 #discover-page1 .caption {
-  font-weight: 600;
-  font-size: 18px;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 #discover-page1 h2.heading {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 15px;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 #page-slider > .carousel-inner,
 #page-slider .item > .container {
-  height: 100%;
+    height: 100%;
 }
 
 #page-slider .item > .container {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-top: 100px;
-  padding-bottom: 100px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .vertical-middle {
-  height: 100%;
-  width: 100%;
-  display: table;
+    height: 100%;
+    width: 100%;
+    display: table;
 }
 
 .vertical-middle > div {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #welcome-page {
-  /*margin-top: 0px;*/
+    /*margin-top: 0px;*/
+    padding: 0px;
 }
 
-
 #page-slider .item {
-  height: 100%;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+    height: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .welcome-page-left {
-  left:20px;
+    left: 20px;
 }
 
 .welcome-page-right {
-  right:20px;
+    right: 20px;
 }
 
-.welcome-page-left, 
+.welcome-page-left,
 .welcome-page-right {
-  position: absolute;
-  top: 50%;
-  margin-top:-35px;
-  font-size: 57px;
-  z-index: 10;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    font-size: 57px;
+    z-index: 10;
 }
 
 .page-header {
-  font-size: 64px;
-  line-height: 64px;
-  border: 0;
-  padding: 0;
-  margin-top: 0;
-  font-weight: 700;
-  margin-bottom: 100px;
-  text-shadow: 1px 1px 1px #000;
+    font-size: 64px;
+    line-height: 64px;
+    border: 0;
+    padding: 0px;
+    margin-top: 0;
+    font-weight: 700;
+    margin-bottom: 100px;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .entry-title {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
 }
 
 .overlay-container {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0,0,0,.5);
-  text-align: center;
-  opacity: 0;
-  -webkit-transition: opacity 400ms;
-  transition: opacity 400ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 400ms;
+    transition: opacity 400ms;
 }
 
 .overlay-container:hover .overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
 a.readmore {
-  font-size: 36px;
-  line-height: 36px;
+    font-size: 36px;
+    line-height: 36px;
 }
 
 .box {
-  background: rgba(0,0,0,.2);
-  padding: 20px;
-  -webkit-transition: background-color 400ms;
-  transition: background-color 400ms;
+    background: rgba(0, 0, 0, .2);
+    padding: 20px;
+    -webkit-transition: background-color 400ms;
+    transition: background-color 400ms;
 }
 
 .box:hover {
-  background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
 }
 
 #footer {
-  margin: 30px 0;
+    margin: 30px 0;
 }
 
 
@@ -237,20 +254,20 @@ a.readmore {
 **************************/
 
 .btn {
-  border: 0;
-  border-radius: 0;
-  -webkit-transition: color 400ms, background-color 400ms;
-  transition: color 400ms, background-color 400ms;
+    border: 0;
+    border-radius: 0;
+    -webkit-transition: color 400ms, background-color 400ms;
+    transition: color 400ms, background-color 400ms;
 }
 
 .btn.btn-transparent {
-  background: rgba(0,0,0,.5);
-  color: #fff;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
 }
 
 .btn.btn-transparent:hover {
-  background: rgba(255,255,255,.3);
-  color: #fff;
+    background: rgba(255, 255, 255, .3);
+    color: #fff;
 }
 
 input[type="text"].form-control,
@@ -258,26 +275,25 @@ input[type="email"].form-control,
 input[type="password"].form-control,
 input[type="url"].form-control,
 textarea.form-control {
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  border: 2px solid rgba(255,255,255,.5);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 2px solid rgba(255, 255, 255, .5);
 }
 
 .form-control::-webkit-input-placeholder {
- color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, .8);
 }
 
 .form-control:-moz-placeholder {
- color: rgba(255,255,255,.8);  
+    color: rgba(255, 255, 255, .8);
 }
 
 .form-control::-moz-placeholder {
- color: rgba(255,255,255,.8); 
+    color: rgba(255, 255, 255, .8);
 }
 
-.form-control:-ms-input-placeholder {  
- color: rgba(255,255,255,.8);
+.form-control:-ms-input-placeholder {
+    color: rgba(255, 255, 255, .8);
 }
-

@@ -324,26 +324,43 @@ a.discover-tabs {
 }
 
 #pro-pic {
-    padding-top: 50px;
+    max-width: 75%;
+    height: auto;
+    border: 1px solid black;
+    width: 275px;
+    float: left;
+    padding-left: 0px;
+    margin: 0px;
+    margin-top: 30px;
 }
 
 #profile-info {
-    color: #222;
-    font-size: 24px;
-    padding: 30px 0px 30px 0px;
+    color: #FFFFFF;
+    font-size: 18px;
+    float: right;
+    margin: 0;
+    padding: 80px 0px 30px 0px;
 }
 
+.dl-horizontal dd {
+    margin-left: 160px;
+}
+
+
 #rct-rles {
-    font-size: 30px;
+    font-size: 50px;
 }
 #releases {
-    background-color: #439756;
+    /*background-color: #439756;*/
+    background-color: #FFFFFF;
+    padding: 0px;
     /*background-color: #2c2f32;*/
 }
 
 h2.spotlight-title {
     color: #FFFFFF;
-    font-size: 50px;    
+    font-size: 50px; 
+    padding: 0px;   
 }
 
 #stage-profile {
@@ -358,6 +375,17 @@ h2.spotlight-title {
 
 #stage {
     background-color: #FFFFFF;
+}
+
+.dl-horizontal dt {
+    float: left;
+    width: 140px;
+    overflow: hidden;
+    clear: left;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 48px;
 }
 
 
