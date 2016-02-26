@@ -1,0 +1,32 @@
+/* Home Page CSS */
+
+#home {
+    background-image: url('../img/bg-rock.jpg');
+    background-size: cover;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+/* Fonts and text shadows */
+#home h1, #home h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Mission statement content */
+#mission {
+    padding: 50px 20px 5px 50px;
+    position: relative;
+    margin-top: 30%
+}
+
+#mission p {
+    color: #439756;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 25px 20px;
+}
+
+#mission h3 {
+    line-height: 50px;
+}

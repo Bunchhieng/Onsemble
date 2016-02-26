@@ -1,0 +1,77 @@
+/* Stage Page CSS */
+
+#stage {
+    background-color: #FFFFFF;
+}
+
+.step-on-stage {
+    border: black 1px solid;
+    padding: 30px 30px 0px 30px;
+}
+
+/* Profile */
+#stage-profile {
+    background-color: #2c2f32;;
+}
+
+.profile-pic {
+    max-width: 75%;
+    height: auto;
+    border: 1px solid black;
+}
+
+#pro-pic {
+    max-width: 75%;
+    height: auto; width: 275px;
+    border: 1px solid black;
+    float: left;
+    padding-left: 0px;
+    margin: 0px;
+    margin-top: 30px;
+}
+
+#profile-info {
+    color: #FFFFFF;
+    font-size: 18px;
+    float: right;
+    margin: 0;
+    padding: 80px 0px 30px 0px;
+}
+
+.dl-horizontal dd {
+    margin-left: 160px;
+}
+
+.dl-horizontal dt {
+    float: left;
+    width: 140px;
+    overflow: hidden;
+    clear: left;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 48px;
+}
+
+/* Spotlight */
+h2.spotlight-title {
+    color: #FFFFFF;
+    font-size: 50px; 
+    padding: 0px;   
+}
+
+/* Recent releases */
+#recent-releases {
+    font-size: 50px;
+}
+
+#releases {
+    background-color: #FFFFFF;
+    padding: 0px;
+}
+
+
+
+/*background-color: #439756;*/
+/*background-color: #2c2f32;*/
+
