@@ -6,13 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var stringify = require('json-stringify-safe');
 
-<<<<<<< HEAD
-=======
 // Bring in database
 require('./app_server/models/db');
 var UserSchema = require('./app_server/models/User');
 
->>>>>>> c4e4f5229d5845bf03417b4d93f75909ec96d2d2
 var routes = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
 
@@ -89,9 +86,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-<<<<<<< HEAD
-
-=======
 console.log('Server is running at port 3000');
->>>>>>> c4e4f5229d5845bf03417b4d93f75909ec96d2d2
 module.exports = app;
