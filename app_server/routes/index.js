@@ -2,12 +2,17 @@ var express = require('express');
 var router = express.Router();
 var mainCtrl = require('../controllers/main');
 
+// Database connection handler
+require('../models/db');
+var UserSchema = require('../models/User');
 /* Locations pages */
-router.get('/', mainCtrl.homelist);
-router.get('/discover', mainCtrl.discoverPage);
-router.get('/stage', mainCtrl.stagePage);
-
-/* Other pages */
-/*router.get('/about', ctrlOthers.about);*/
+router.get('/', function(req, res, next) {
+  UserSchema.find({}, function(err, data) {
+    if (err) console.log(err);
+    res.render('index', {
+      results: data
+    });
+  });
+});
 
 module.exports = router;
