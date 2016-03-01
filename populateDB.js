@@ -5,8 +5,10 @@
  */
 
 var UserSchema = require('./app_server/models/User');
+// Using got to make HTTP request, it's lightweight compare to request
 var got = require('got');
 var mongoose = require('mongoose');
+var moment = require('moment');
 // Database handler
 require('./app_server/models/db');
 
@@ -15,6 +17,8 @@ var results = [];
 
 /**
  * Generate future date in format dd/mm/yyyy
+ *
+ * @return {Date} - Future date = Current date + 365000000days
  */
 function generateDate() {
   var targetDate = new Date();
@@ -30,6 +34,7 @@ function generateDate() {
  */
 function generatePeople(r) {
   var o = {};
+  o._id = r.results[0].user.username;
   o.username = r.results[0].user.username;
   o.email = r.results[0].user.email;
   o.password = r.results[0].user.password;
@@ -38,7 +43,8 @@ function generatePeople(r) {
     gender: r.results[0].user.gender,
     picture: r.results[0].user.picture.medium,
     location: r.results[0].user.location.street + ', ' + r.results[0].user.location.city + ', ' + r.results[0].user.location.state + ', ' + r.results[0].user.location.zip,
-    videos: ['https://www.youtube.com/embed/tR87Jk8ECm0',
+    videos: [
+      'https://www.youtube.com/embed/tR87Jk8ECm0',
       "https://www.youtube.com/embed/1s9Xs6wEZHc",
       "https://www.youtube.com/embed/iPeIXDRa2HE",
       "https://www.youtube.com/embed/rOjHhS5MtvA",
@@ -63,15 +69,20 @@ function generatePeople(r) {
       "https://www.youtube.com/embed/L_PS8wZNqrc",
       "https://www.youtube.com/embed/IOPpyNRBXCM"
     ],
+    // Random number between 1000000 and 10000
     followers: Math.floor(Math.random() * (1000000 - 10000 + 1) + 100000),
-    followings: Math.floor(Math.random() * (1000000 - 10000 + 1) + 1000)
+    followings: Math.floor(Math.random() * (1000000 - 10000 + 1) + 10000)
   };
+  // Get a random string with 3 letters
   o.resetPasswordToken = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
-  o.resetPasswordExpires = generateDate();
-    return o;
+  // Use moment to get current data and make a nice format
+  o.resetPasswordExpires = moment().add(700, 'days').format('MMMM Do YYYY, h:mm:ss a');
+  return o;
 }
 /**
  * We need to empty the database everytime we populate it to avoid duplicate error
+ *
+ * @param {Object} db - JSON object
  */
 function emptyThenInsert(db) {
   UserSchema.collection.insert(db, function(err, data) {
@@ -114,6 +125,7 @@ function runSequence(url, num) {
   });
 }
 
+// Using Promise to get 10 results
 runSequence(URL, 10).then(function(results) {
   console.log(results.length);
   var db = [];

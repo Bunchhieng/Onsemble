@@ -4,9 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var stringify = require('json-stringify-safe');
 
 // Bring in database
 require('./app_server/models/db');
+var UserSchema = require('./app_server/models/User');
 
 var routes = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
@@ -29,6 +31,31 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+/**
+ * Onsemble RESTFul API
+ *
+ * /api/:userid/discover/ -
+ * /api/:userid -
+ */
+// Get all users
+app.use('/api/users/', function(req, res) {
+  UserSchema.find({}, function(err, result) {
+    if (err) console.log(err);
+    res.json(result);
+  });
+});
+
+// Get specific user
+app.use('/api/:userid/', function(req, res) {
+  var id = req.params.userid;
+  UserSchema.find({
+    _id: id
+  }, function(err, result) {
+    if (err) console.log(err);
+    res.json(result);
+  });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

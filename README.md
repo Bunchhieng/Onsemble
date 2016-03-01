@@ -29,6 +29,13 @@ git pull
 git pull origin your_branch
 git push
 ```
+## RESTFul API
+Link | Verb | Description
+------------ | ------------- | -------------
+/api/users/ | GET | Get all user from database
+/api/:userid/ | GET | Get specific user
+/api/:userid/ | UPDATE | Update specific user
+/api/:userid/ | DELETE | Delete specific user
 
 ## Timeline
 Assignment # | Due date | Status | Person in charge
