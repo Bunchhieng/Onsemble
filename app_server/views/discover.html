@@ -1,174 +1,202 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <!--
-        Project Name: Onsemble
-        Crew: Justin Nguyen, Santiago Paredes, Bunchhieng Soth, Takyui Lo
-        Last Updated: February 4, 2016
-        -->
-    <link rel="icon" type="image/png" href="../../public/img/Onsemble.png" />
-    <title>Discover - Onsemble</title>
-    <!-- Bootstrap CSS -->
-    <link href="../../public/css/bootstrap.css" rel="stylesheet" />
-    <!-- Ion Icon Styles CSS-->
-    <link href="../../public/css/ionicons.css" rel="stylesheet" />
-    <!-- Font Awesome CSS -->
-    <link href="../../public/css/font-awesome.css" rel="stylesheet" />
-    <!-- Fancy Box CSS -->
-    <link href="../../public/css/jquery.fancybox.css" rel="stylesheet" />
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/south-street/jquery-ui.css">
-    <!-- Viewpoint Animation CSS -->
-    <link href="../../public/css/animations.min.css" rel="stylesheet" />
-    <!-- Custom CSS -->
-    <link href="../../public/css/style-red.css" rel="stylesheet" />
-    <link href='../../public/css/main.css' rel='stylesheet' />
-</head>
-
-<body data-spy="scroll" data-target="#menu-section">
-    <!--Navigation Bar-->
-    <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="#home" class="pull-left"><img class='navbar-logo' src="../../public/img/Onsemble.png"></a>
-                <p class="nav navbar-text nav-logo"><span style="color: #439756">n</span>semble</p>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#discover">DISCOVER</a></li>
-                    <li><a href="#stage">STAGE</a></li>
-                    <!--<li><a href="#contact">CONTACT</a></li>-->
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--Navigation End-->
-    <!--Discover-->
-    <div id="discover" class='bg-onsemble-green'>
-        <div class="container-fluid">
-            <div class="row">
-                <div>
-                    <h1 class='title-discover text-center font-green'>DISCOVER</h1>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" type="image/png" href="../../public/img/Onsemble.png">
+        <title>
+            Discover - Onsemble
+        </title><!-- Bootstrap CSS -->
+        <link href="../../public/css/bootstrap.css" rel="stylesheet" type="text/css"><!-- Ion Icon Styles CSS-->
+        <link href="../../public/css/ionicons.css" rel="stylesheet" type="text/css"><!-- Font Awesome CSS -->
+        <link href="../../public/css/font-awesome.css" rel="stylesheet" type="text/css"><!-- Fancy Box CSS -->
+        <link href="../../public/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+        <link href='../../public/css/main.css' rel='stylesheet' type="text/css">
+        <link href='../../public/css/discover.css' rel='stylesheet' type="text/css">
+    </head>
+    <body data-spy="scroll" data-target="#menu-section">
+        <!--Navigation Bar-->
+        <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#home" class="pull-left"><img class='navbar-logo' src="../../public/img/Onsemble.png"></a>
+                    <p class="nav navbar-text nav-logo">
+                        <span style="color: #439756">n</span>semble
+                    </p>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#home">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#discover">DISCOVER</a>
+                        </li>
+                        <li>
+                            <a href="#stage">STAGE</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </div>
-    <!--Home End-->
-    <div id='discover-videos' class='bg-onsemble-grey container-fluid fill'>
-        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
-            <h2 class='text-center'></h2>
-            <div id="content">
-                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                    <li class="active"><a class="discover-tabs" href="#rock" data-toggle="tab">Rock</a></li>
-                    <li><a class='discover-tabs' href="#pop" data-toggle="tab">Pop</a></li>
-                    <li><a class='discover-tabs' href="#reggae" data-toggle="tab">Reggae</a></li>
-                    <li><a class='discover-tabs' href="#rap" data-toggle="tab">Rap</a></li>
-                    <li><a class='discover-tabs' href="#acapella" data-toggle="tab">Acapella</a></li>
-                </ul>
-                <div id="my-tab-content" class="tab-content">
-                    <div class="tab-pane active" id="rock">
-                        <h1>Rock</h1>
-                        <div class='col-lg-4 col-md-4'>
-                            <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="360" height="220" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class='col-lg-4 col-md-4'>
-                            <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="360" height="220" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class='col-lg-4 col-md-4'>
-                            <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="360" height="220" frameborder="0" allowfullscreen></iframe>
-                        </div>
+        </div><!--Navigation End-->
+        <!--Discover-->
+        <section id="discover" class="container">
+            <div class="text-center">
+                <h2 class="page-header">
+                    Discover
+                </h2>
+            </div>
+            <div class="col-xs-12 tab-content">
+                <div class="carousel slide" id="myCarousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <ul class="thumbnails">
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/tR87Jk8ECm0" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="title-box">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/1s9Xs6wEZHc" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="title-box">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="title-box">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /Slide1 -->
+                        <!---->
+                        <div class="item">
+                            <ul class="thumbnails">
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/NHVE_GEBFwM" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="caption">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/0H7aV1XckCo" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="caption">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/6h5OgqqSYw4" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="caption">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /Slide2 -->
+                        <div class="item">
+                            <ul class="thumbnails">
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/l0rQFh-dG7s" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="caption">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/tR87Jk8ECm0" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="caption">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="fff">
+                                        <iframe src="https://www.youtube.com/embed/tIx6_Z5v88k" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
+                                        <div class="caption">
+                                            <h4>
+                                                Praesent commodo
+                                            </h4>
+                                            <p>
+                                                Nullam Condimentum Nibh Etiam Sem
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /Slide3 -->
                     </div>
-                    <div class="tab-pane" id="pop">
-                        <h1>Pop</h1>
-                        <p>orange orange orange orange orange</p>
-                    </div>
-                    <div class="tab-pane" id="reggae">
-                        <h1>Reggae</h1>
-                        <p>yellow yellow yellow yellow yellow</p>
-                    </div>
-                    <div class="tab-pane" id="rap">
-                        <h1>Rap</h1>
-                        <p>green green green green green</p>
-                    </div>
-                    <div class="tab-pane" id="acapella">
-                        <h1>Acapella</h1>
-                        <p>blue blue blue blue blue</p>
-                    </div>
+                    <ul class="control-box pager">
+                        <li>
+                            <a data-slide="prev" href="#myCarousel" class=""></a>
+                        </li>
+                        <li>
+                            <a data-slide="next" href="#myCarousel" class=""></a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <h2>Suggested Artists<h2>
-            <div>
-                <div class='col-lg-4 col-md-4'>
-                    <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="360" height="220" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div>
-                <div class='col-lg-4 col-md-4'>
-                    <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="360" height="220" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class='col-lg-4 col-md-4'>
-                <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="360" height="220" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <div class='container-fluid bg-blk'>
-        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">        
-            <div class="social">
-                <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-facebook "></i></a>
-                <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-google-plus "></i></a>
-                <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-github "></i></a>
-            </div>
-        </div>
-    </div>
-    <!--<div class='container-fluid'>        
-        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
-            <h3>Suggested Artists</h3>
-            <div class='col-lg-4 col-md-4'>
-                <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="280" height="160" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class='col-lg-4 col-md-4'>
-                <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="280" height="160" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class='col-lg-4 col-md-4'>
-                <iframe src="https://www.youtube.com/embed/iPeIXDRa2HE" width="280" height="160" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>-->
-    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME -->
-    <!-- CORE JQUERY -->
-    <script src="../../public/js/jquery-1.11.1.js"></script>
-    <script src='../../public/js/jquery-ui.js'></script>
-    <!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>f-->
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="../../public/js/bootstrap.js"></script>
-    <!-- EASING SCROLL SCRIPTS PLUGIN -->
-    <script src="../../public/js/vegas/jquery.vegas.min.js"></script>
-    <!-- VEGAS SLIDESHOW SCRIPTS -->
-    <script src="../../public/js/jquery.easing.min.js"></script>
-    <!-- FANCYBOX PLUGIN -->
-    <script src="../../public/js/source/jquery.fancybox.js"></script>
-    <!-- ISOTOPE SCRIPTS -->
-    <script src="../../public/js/jquery.isotope.js"></script>
-    <!-- VIEWPORT ANIMATION SCRIPTS   -->
-    <script src="../../public/js/appear.min.js"></script>
-    <script src="../../public/js/animations.min.js"></script>
-    <!-- CUSTOM SCRIPTS -->
-    <script src="../../public/js/main.js"></script>
-    <!--<script src="js/custom.js"></script>-->
-
-</body>
-
+            </div><!-- /.control-box -->
+            <!-- /#myCarousel -->
+            <!-- /.col-xs-12 -->
+        </section><script src="../../public/js/jquery-1.11.1.js" type="text/javascript">
+</script><script src="../../public/js/bootstrap.js" type="text/javascript">
+</script><script src="../../public/js/main.js" type="text/javascript">
+</script>
+    </body>
 </html>
