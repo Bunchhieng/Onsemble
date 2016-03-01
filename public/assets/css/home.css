@@ -27,8 +27,8 @@ body {
 /* Mission statement content */
 #mission {
     padding: 50px 20px 5px 50px;
-    padding-top:260px;
     position: relative;
+    padding-top: 260px;
 }
 
 #mission p {
