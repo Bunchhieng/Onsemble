@@ -11,6 +11,10 @@ var mongoose = require('mongoose'),
  * dummy data.
  */
 var UserSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    unique: true
+  },
   email: {
     type: String,
     unique: true,

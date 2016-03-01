@@ -4,7 +4,7 @@
  * Handling database connection.
  */
 var mongoose = require('mongoose');
-var dbURI = 'mongodb://localhost/onsemble';
+var dbURI = 'mongodb://localhost:27017/onsemble';
 // Check current environment then assign dbURI based on the environment
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGOLAB_URI;

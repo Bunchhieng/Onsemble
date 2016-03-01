@@ -61,8 +61,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// Cool kids don't like using port 3000
-app.set('port', 8080);
-app.listen(app.get('PORT'));
-console.log('Server is running at port 8080');
+console.log('Server is running at port 3000');
 module.exports = app;
