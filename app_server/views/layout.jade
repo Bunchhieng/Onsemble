@@ -1,26 +1,66 @@
 doctype html
-html
+html.no-js(lang='en')
   head
     meta(charset='utf-8')
+    |     
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    |     
     meta(name='description', content='')
+    |     
     meta(name='author', content='')
-    //if IE
-        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    link(rel='icon', type='image/png', href='img/Onsemble.png')
-    title Onsemble
-    // BOOTSTRAP CORE CSS
-    link(href='css/bootstrap.css', rel='stylesheet')
-    // ION ICONS STYLES
-    link(href='css/ionicons.css', rel='stylesheet')
-    // FONT AWESOME ICONS STYLES
-    link(href='css/font-awesome.css', rel='stylesheet')
-    // FANCYBOX POPUP STYLES
-    link(href='js/source/jquery.fancybox.css', rel='stylesheet')
-    // STYLES FOR VIEWPORT ANIMATION
-    link(href='css/animations.min.css', rel='stylesheet')
-    // CUSTOM CSS
-    link(href='css/style-red.css', rel='stylesheet')
-    link(href='css/main.css', rel='stylesheet')
-  body
+    //
+      Project Name: Onsemble
+      Crew: Justin Nguyen, Santiago Paredes, Bunchhieng Soth, Takyui Lo
+      Last Updated: March 1, 2016
+    link(rel='icon', type='image/png', href='/assets/img/Onsemble.png')
+    |     
+    title Stage - Onsemble
+    // Bootstrap CSS
+    link(href='/assets/css/bootstrap.css', rel='stylesheet')
+    // Ion Icon Styles CSS
+    link(href='/assets/css/ionicons.css', rel='stylesheet')
+    // Font Awesome CSS
+    link(href='/assets/css/font-awesome.css', rel='stylesheet')
+    // Fancy Box CSS
+    link(href='/assets/css/jquery.fancybox.css', rel='stylesheet')
+    |     
+    link(rel='stylesheet', href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/south-street/jquery-ui.css')
+    // Viewpoint Animation CSS
+    link(href='/assets/css/animations.min.css', rel='stylesheet')
+    // Custom CSS
+    link(href='/assets/css/main.css', rel='stylesheet')
+    |     
+    link(href='/assets/css/home.css', rel='stylesheet')
+
+    link(href='/assets/css/discover.css', rel='stylesheet', type='text/css')
+    link(href='/assets/css/stage.css', rel='stylesheet', type='text/css')
+  body(data-spy='scroll', data-target='#menu-section')
+    // Navigation Bar
+    #menu-section.navbar.navbar-inverse.navbar-fixed-top.scroll-me
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+          |                 
+          a.pull-left(href='#home')
+            img.navbar-logo(src='/assets/img/Onsemble.png')
+          p.nav.navbar-text.nav-logo
+            span(style='color: #439756') n
+            | semble
+        |             
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') HOME
+            |                     
+            li
+              a(href='/discover/') DISCOVER
+            |                     
+            li
+              a(href='/stage/') STAGE
+    // Navigation End
     block content
