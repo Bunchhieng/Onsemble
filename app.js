@@ -11,6 +11,8 @@ var UserSchema = require('./app_server/models/User');
 
 var routes = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
+var discover = require('./app_server/routes/discover');
+var stage = require('./app_server/routes/stage');
 
 var app = express();
 
@@ -28,7 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-
+app.use('/discover', discover);
+app.use('/stage', stage);
 /**
  * Onsemble RESTFul API
  *
