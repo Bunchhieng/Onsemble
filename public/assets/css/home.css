@@ -1,7 +1,7 @@
 /* Home Page CSS */
 
 #home {
-    background-image: url('../img/bg-rock.jpg');
+    background-image: url('/assets/img/bg-rock.jpg');
     background-size: cover;
     text-align: center;
     padding-top: 120px;
@@ -17,7 +17,6 @@
 #mission {
     padding: 50px 20px 5px 50px;
     position: relative;
-    margin-top: 30%
 }
 
 #mission p {

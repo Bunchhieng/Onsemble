@@ -1,11 +1,10 @@
 /* GET 'home' page */
 module.exports.homelist = function(req, res){
-res.render('location-list', { title: 'Home' });
+res.render('index', { title: 'Home' });
 };
 
-/* GET 'Location info' page */
-module.exports.locationInfo = function(req, res){
-res.render('index', { title: 'Location info' });
+module.exports.discoverlist = function(req, res){
+res.render('discover', { title: 'Discover' });
 };
 
 /* GET 'Add review' page */
