@@ -247,7 +247,16 @@ a.readmore {
     margin: 30px 0;
 }
 
+/* Disabling standard bootstrap style */
+.pager li > a, .pager li > span {
+    background-color: transparent;
+    border: none;
+}
 
+.pager li > a:visited, .pager li > span {
+    background-color: transparent;
+    border: none;
+}
 
 
 /* Video CSS */
@@ -318,7 +327,7 @@ div .caption {
 
 /* Carousel Control */
 .control-box {
-    text-align: right;
+    text-align: center;
     width: 100%;
 }
 .carousel-control{
