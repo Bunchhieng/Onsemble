@@ -193,9 +193,15 @@ a:hover .fa {
     line-height: 64px;
     border: 0;
     padding: 0px;
+    padding-bottom: 10px;
     margin-top: 0;
     font-weight: 700;
-    margin-bottom: 100px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.page-subheader {
+    margin-bottom: 20px;
+    padding-bottom: 60px;
     text-shadow: 1px 1px 1px #000;
 }
 
@@ -247,7 +253,17 @@ a.readmore {
     margin: 30px 0;
 }
 
-
+/* Disabling standard bootstrap style */
+.pager li > a, .pager li > span {
+    background-color: transparent;
+    /*border: none;*/
+}
+.pager li > a:focus {
+  background-color: transparent;
+}
+a:focus {
+    color: #fff;
+}
 
 
 /* Video CSS */
@@ -318,8 +334,9 @@ div .caption {
 
 /* Carousel Control */
 .control-box {
-    text-align: right;
+    text-align: center;
     width: 100%;
+    margin-top:50px;
 }
 .carousel-control{
     background: #666;

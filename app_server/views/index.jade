@@ -1,6 +1,7 @@
 extends layout
 block content
     // Home
+    link(href='/assets/css/home.css', rel='stylesheet')
     #home
       .container
         .row
@@ -31,10 +32,10 @@ block content
                   </div>
         |             
         .col-sm-6.col-sm-offset-3.col-md-6.col-md-offset-3.col-lg-8.col-lg-offset-2.scroll-me
-          a.btn.button-social-textbox.btn-social-textbox(href='#signup') Sign up now!
+          a.btn.button-onsemble.btn-onsemble(href='/discover/') Start Now!
     // Home End
     // JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME
     // CORE JQUERY
-    script(src='/js/jquery-1.11.1.js')
+    script(src='/assets/js/jquery-1.11.1.js')
     // BOOTSTRAP SCRIPTS
-    script(src='/js/bootstrap.js')
+    script(src='/assets/js/bootstrap.js')

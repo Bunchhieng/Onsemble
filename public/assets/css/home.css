@@ -1,11 +1,22 @@
 /* Home Page CSS */
 
 #home {
-    background-image: url('/assets/img/bg-rock.jpg');
-    background-size: cover;
+    /*background: url('/assets/img/bg-rock.jpg') no-repeat center center fixed; */
+/*    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
     text-align: center;
     padding-top: 120px;
     padding-bottom: 60px;
+}
+
+body {
+    background: url('/assets/img/bg-rock.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Fonts and text shadows */
@@ -17,6 +28,7 @@
 #mission {
     padding: 50px 20px 5px 50px;
     position: relative;
+    padding-top: 260px;
 }
 
 #mission p {
