@@ -20,34 +20,6 @@ var NUM = 20;
 var results = [];
 
 /**
- * This function require a YouTube link and return a YouTube video ID
- *
- * @return {String} ID - Youtube video ID
- */
-function youtube_parser(url) {
-  var match = url.match(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/);
-  return (match && match[7].length == 11) ? match[7] : false;
-}
-
-/**
- * This function requires a YouTube video ID and return an embeded YouTube url.
- * With below conditions:
- * autoplay=1 - autoplay the video once the video is buffed
- * start=0&end=15 - show the first 15 seconds of the embed video
- * showinfo=0 - show NO information such as title
- * controls=0 - show NO player controls
- * disablekb=1 - disable keyboard
- * rel=0 - show no relevance video after video is done
- * However, disabling showinfo and controls will result in showing a YouTube
- * logo on the lower right corner of the video. This logo can't not be remove
- * otherwise it will violate YouTube terms
- */
-function youtubeEmbededURL(videoID) {
-  return "http://www.youtube.com/embed/" + videoID +
-    "?autoplay=1&start=0&end=15&showinfo=0&controls=0&disablekb=1&rel=0";
-}
-
-/**
  * We need:
  * - Username
  * - Email
