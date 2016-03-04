@@ -11,12 +11,10 @@ var UserSchema = require('./app_server/models/User');
 
 var routes = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
-<<<<<<< HEAD
 var test = require('./app_server/routes/test');
-=======
 var discover = require('./app_server/routes/discover');
 var stage = require('./app_server/routes/stage');
->>>>>>> b9b2e3cf7da891bb8d73a31419dddc242df6e1f9
+
 
 var app = express();
 
