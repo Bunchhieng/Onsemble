@@ -12,7 +12,11 @@ var moment = require('moment');
 // Database handler
 require('./app_server/models/db');
 
+// Random user API
 var URL = 'https://randomuser.me/api/';
+// Number of request to randomuser API
+var NUM = 20;
+// Store all the JSON data from the request.
 var results = [];
 
 /**
@@ -144,8 +148,8 @@ function runSequence(url, num) {
 }
 
 // Using Promise to get 10 results
-runSequence(URL, 10).then(function(results) {
-  console.log(results.length);
+runSequence(URL, NUM).then(function(results) {
+  console.log(results.length + " documents has been inserted to the database.");
   var db = [];
   for (var i = 0; i < 10; i++) {
     var result = JSON.parse(results[i]);
