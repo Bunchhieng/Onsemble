@@ -34,12 +34,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-<<<<<<< HEAD
 app.use('/test', test);
-=======
 app.use('/discover', discover);
 app.use('/stage', stage);
->>>>>>> b9b2e3cf7da891bb8d73a31419dddc242df6e1f9
 /**
  * Onsemble RESTFul API
  *
