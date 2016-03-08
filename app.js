@@ -11,8 +11,10 @@ var UserSchema = require('./app_server/models/User');
 
 var routes = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
+var test = require('./app_server/routes/test');
 var discover = require('./app_server/routes/discover');
 var stage = require('./app_server/routes/stage');
+
 
 var app = express();
 
@@ -24,12 +26,15 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/test', test);
 app.use('/discover', discover);
 app.use('/stage', stage);
 /**
