@@ -32,9 +32,10 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Routing
 app.use('/', routes);
 app.use('/users', users);
-app.use('/test', test);
+app.use('/:user/', test);
 app.use('/discover', discover);
 app.use('/stage', stage);
 /**
