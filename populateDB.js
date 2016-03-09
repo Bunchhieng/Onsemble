@@ -33,10 +33,10 @@ function generatePeople(r) {
   o.email = r.results[0].user.email;
   o.password = r.results[0].user.password;
   o.profile = {
-    name: r.results[0].user.name.first + ' ' + r.results[0].user.name.last,
-    gender: r.results[0].user.gender,
+    name: capitalizeFirstLetter(r.results[0].user.name.first) + ' ' + capitalizeFirstLetter(r.results[0].user.name.last),
+    gender: r.results[0].user.gender.toUpperCase(),
     picture: r.results[0].user.picture.medium,
-    location: r.results[0].user.location.city + ', ' + r.results[0].user.location.state,
+    location: capitalizeFirstLetter(r.results[0].user.location.city) + ', ' + capitalizeFirstLetter(r.results[0].user.location.state),
     videos: [
       'https://www.youtube.com/embed/tR87Jk8ECm0',
       "https://www.youtube.com/embed/1s9Xs6wEZHc",
@@ -87,6 +87,12 @@ function emptyThenInsert(db) {
   });
 }
 
+/**
+ * Change the first character to uppercase
+ */
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 /**
  * Do n requests to ranmdom user api
  *
