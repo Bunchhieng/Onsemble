@@ -9,6 +9,7 @@ var UserSchema = require('./app_server/models/User');
 var got = require('got');
 var mongoose = require('mongoose');
 var moment = require('moment');
+var async = require('async');
 // Database handler
 require('./app_server/models/db');
 
@@ -129,7 +130,7 @@ function runSequence(url, num) {
 runSequence(URL, NUM).then(function(results) {
   console.log(results.length + " documents has been inserted to the database.");
   var db = [];
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < NUM; i++) {
     var result = JSON.parse(results[i]);
     var d = generatePeople(result);
     db.push(d);

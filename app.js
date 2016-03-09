@@ -15,6 +15,7 @@ var test = require('./app_server/routes/test');
 var discover = require('./app_server/routes/discover');
 var stage = require('./app_server/routes/stage');
 var login = require('./app_server/routes/login');
+var upload = require('./app_server/routes/upload');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing
+app.use('/upload', upload);
 app.use('/login', login);
 app.use('/', index);
 app.use('/users', users);
