@@ -5,14 +5,17 @@ require('../models/db');
 var UserSchema = require('../models/User');
 
 router.get('/', function(req, res, next) {
+  console.log(req.baseUrl);
   var user = req.baseUrl.slice(1);
-  console.log(user);
-  UserSchema.find({} , function(err, data) {
-    if (err) console.log(err);
+  UserSchema.find({
+    _id : user
+  }, function(err, data) {
+    if(err) console.log(err);
     console.log(data);
-    res.render('stage', {
+    res.render('stage-test', {
       data: data
     });
   });
 });
+
 module.exports = router;

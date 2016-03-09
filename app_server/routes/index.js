@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var mainCtrl = require('../controllers/main');
 
 // Database connection handler
 require('../models/db');
@@ -14,5 +13,12 @@ router.get('/', function(req, res, next) {
     });
   });
 });
+
+// TODO: use only 1 file for route
+// router.get('/', ctrOnsemble.home);
+// router.get('/stage/:userid', ctrOnsemble.addUser);
+// router.get('/stage/:userid', ctrOnsemble.updateUser);
+// router.get('/stage/:userid', ctrOnsemble.deleteUser);
+// router.get('/discover', ctrOnsemble.discover);
 
 module.exports = router;

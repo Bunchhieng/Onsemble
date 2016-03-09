@@ -1,6 +1,6 @@
 ## Onsemble
 GUI II project repo
-
+[![Gitter](https://badges.gitter.im/Bunchhieng/Onsemble.svg)](https://gitter.im/Bunchhieng/Onsemble?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 ## How to work on this project
 1. `git clone https://github.com/Bunchhieng/Onsemble.git`
 2. `npm install` to install all modules in package.json
@@ -30,11 +30,11 @@ git pull origin your_branch
 git push
 ```
 ## RESTFul API
-Link | Verb | Description
------------- | ------------- | -------------
-/api/users/ | GET | Get all user from database
-/api/:userid/ | GET | Get specific user
-/api/:userid/ | UPDATE | Update specific user
+| Link | Verb | Description |       
+| ------------ | ------------- | ------------- |     
+/api/users/ | GET | Get all user from database |     
+/api/:userid/ | GET | Get specific user     
+/api/:userid/ | UPDATE | Update specific user   
 /api/:userid/ | DELETE | Delete specific user
 
 ## Timeline

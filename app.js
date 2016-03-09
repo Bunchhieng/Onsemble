@@ -9,10 +9,12 @@ var bodyParser = require('body-parser');
 require('./app_server/models/db');
 var UserSchema = require('./app_server/models/User');
 
-var routes = require('./app_server/routes/index');
+var index = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
+var test = require('./app_server/routes/test');
 var discover = require('./app_server/routes/discover');
 var stage = require('./app_server/routes/stage');
+var login = require('./app_server/routes/login');
 
 var app = express();
 
@@ -24,14 +26,19 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+// Routing
+app.use('/login', login);
+app.use('/', index);
 app.use('/users', users);
 app.use('/discover', discover);
 app.use('/stage', stage);
+
 /**
  * Onsemble RESTFul API
  *
