@@ -1,11 +1,6 @@
 /* Home Page CSS */
 
 #home {
-    /*background: url('/assets/img/bg-rock.jpg') no-repeat center center fixed; */
-/*    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;*/
     text-align: center;
     padding-top: 120px;
     padding-bottom: 60px;
@@ -27,8 +22,8 @@ body {
 /* Mission statement content */
 #mission {
     padding: 50px 20px 5px 50px;
-    position: relative;
-    padding-top: 260px;
+    text-align: center;
+    padding-top: 225px;
 }
 
 #mission p {
