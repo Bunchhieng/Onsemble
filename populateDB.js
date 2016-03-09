@@ -36,7 +36,7 @@ function generatePeople(r) {
     name: r.results[0].user.name.first + ' ' + r.results[0].user.name.last,
     gender: r.results[0].user.gender,
     picture: r.results[0].user.picture.medium,
-    location: r.results[0].user.location.street + ', ' + r.results[0].user.location.city + ', ' + r.results[0].user.location.state + ', ' + r.results[0].user.location.zip,
+    location: r.results[0].user.location.city + ', ' + r.results[0].user.location.state,
     videos: [
       'https://www.youtube.com/embed/tR87Jk8ECm0',
       "https://www.youtube.com/embed/1s9Xs6wEZHc",
