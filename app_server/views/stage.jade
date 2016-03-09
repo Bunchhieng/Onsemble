@@ -1,4 +1,4 @@
-extends layout
+extends layout_stage
 block content
 	link(href='/assets/css/stage.css', rel='stylesheet', type='text/css')
 	#stage
@@ -20,6 +20,13 @@ block content
 					dd Folk
 					dt Bio:
 					dd I like long walks on the beach. Flexing my balloon muscles.
+					dt Followers: 
+					dd #{data[0].profile.followers} 
+					dt Followings: 
+					dd #{data[0].profile.followings}
+					dt Videos: 
+					dd #{data[0].profile.videos.length}
+				button.btn.btn-info.follow(type='button') Follow
 			|         
 			#spotlight.col-md-5
 				h2.spotlight-title.text-center.font-white Spotlight

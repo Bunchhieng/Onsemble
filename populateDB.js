@@ -9,13 +9,14 @@ var UserSchema = require('./app_server/models/User');
 var got = require('got');
 var mongoose = require('mongoose');
 var moment = require('moment');
+var async = require('async');
 // Database handler
 require('./app_server/models/db');
 
 // Random user API
 var URL = 'https://randomuser.me/api/';
 // Number of request to randomuser API
-var NUM = 20;
+var NUM = 40;
 // Store all the JSON data from the request.
 var results = [];
 
@@ -79,10 +80,14 @@ function generatePeople(r) {
  * @param {Object} db - JSON object
  */
 function emptyThenInsert(db) {
-  UserSchema.collection.insert(db, function(err, data) {
-    if (err) console.log(err);
-    UserSchema.collection.find({}, function(err, data) {
+  UserSchema.remove({}, function(err) {
+    if(err) console.log(err);
+    UserSchema.collection.insert(db, function(err, data) {
       if (err) console.log(err);
+      UserSchema.collection.find({}, function(err, data) {
+        if (err) console.log(err);
+      });
+      process.exit(1);
     });
   });
 }
@@ -129,11 +134,10 @@ function runSequence(url, num) {
 runSequence(URL, NUM).then(function(results) {
   console.log(results.length + " documents has been inserted to the database.");
   var db = [];
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < NUM; i++) {
     var result = JSON.parse(results[i]);
     var d = generatePeople(result);
     db.push(d);
   }
   emptyThenInsert(db);
-  process.exit(1);
 });

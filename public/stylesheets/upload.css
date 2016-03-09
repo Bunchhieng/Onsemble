@@ -1,0 +1,23 @@
+body {
+  background-color: #1cbb9b;
+}
+.upload {
+  margin-top: 150px;
+}
+
+.btn-primary {
+  margin-left: 10px;
+  background-color: #1CB94E;
+}
+
+.copyright {
+  margin-top: 100px;
+}
+
+a:link {
+  color: #6495ED;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
