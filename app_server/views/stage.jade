@@ -32,7 +32,7 @@ block content
 				h2.spotlight-title.text-center.font-white Spotlight
 				|             
 				.text-center
-					iframe(src='#{data[0].profile.videos[0]}', width='425', height='200', frameborder='0', allowfullscreen='')
+					iframe(src='#{data[0].profile.videos[0]}' width='425' height='250' frameborder='0' allowfullscreen)
 		|     
 		section#releases.container-fluid
 			div
@@ -40,7 +40,7 @@ block content
 					h3#recent-releases.font-black Recent Releases
 					|                 
 					each v in data[0].profile.videos
-						iframe(src=v, width='350', height='200', frameborder='0', allowfullscreen='' class='video', style='margin-left:20px;margin-top:20px;')
+						iframe(src=v, width='400' height='250' frameborder='0' class='video' style='margin-left:20px;margin-top:20px;' allowfullscreen)
 		|     
 		.container-fluid.bg-blk
 			.col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2.text-center
@@ -58,3 +58,4 @@ block content
 						i.fa.fa-github
 	script(src='/assets/js/jquery-1.11.1.js')
 	script(src='/assets/js/bootstrap.js')
+	script(src='/js/main.js')
