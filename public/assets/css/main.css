@@ -25,7 +25,6 @@ section {
 /* Need a place for this */
 
 .title-box {
-<<<<<<< HEAD
     padding-top:10px;
     padding-bottom:10px;
 /*    -webkit-border-radius: 10px;
@@ -34,7 +33,6 @@ section {
     background:rgba(0,0,0,0.8);
     padding-left:50px;
     margin-top: 20px;
-=======
   padding-top: 10px;
   padding-bottom: 10px;
   -webkit-border-radius: 10px;
@@ -43,7 +41,6 @@ section {
   background: rgba(0, 0, 0, 0.8);
   padding-left: 50px;
   margin-top: 20px;
->>>>>>> 2b040f65aea96c683bcdafa9d26173f6b13a038e
 }
 
 /* Primary Colors */

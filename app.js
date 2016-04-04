@@ -20,9 +20,6 @@ var stage = require('./app_server/routes/stage');
 var login = require('./app_server/routes/login');
 var upload = require('./app_server/routes/upload');
 
-<<<<<<< HEAD
-
-=======
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
  *
@@ -33,7 +30,6 @@ dotenv.load({
 });
 
 // Intitialize express
->>>>>>> 2b040f65aea96c683bcdafa9d26173f6b13a038e
 var app = express();
 
 // Added on 03/09/16 Trying to implement session and cookies
