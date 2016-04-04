@@ -26,7 +26,7 @@
     <link href="/assets/css/animations.min.css" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="/assets/css/main.css" rel="stylesheet">
-    <link href="/assets/css/home.css" rel="stylesheet" />
+    <link href="/stylesheets/login.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body data-spy="scroll" data-target="#menu-section">
@@ -48,44 +48,39 @@
             </div>
         </div>
     </div>
-    <!-- Home-->
-    
-    <div id="home">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-                    <div>
-                        <h1 class="title"><img src="/assets/img/Onsemble.png" class="onsemble-logo"/><span class="onsemble-grey">n</span><span class="onsemble-green">semble</span></h1>
-                        <h2>One Stage, Immesurable Fanbase</h2>
-                    </div>
-                    <div id="mission">
-                        <div>
-                            <div>
-                                <h3>Instant connections, lasting relationships</h3>
-                                <p>Speedily explore the latest and best of local artists. Follow their work and their tour as they grow, and never miss a beat.</p>
-                            </div>
-                            <!--
-            <div class="item">
-            <h3>Reaching multitude in one click</h3>
-            <p>
-            Push your latest video notifications to your fans and to potential fan base with a simple click of a button. Make your life
-            easier in one swift action.
-            </p>
+    <div class="login-box">
+        <div class="lb-header"><a id="login-box-link" href="#" class="active">Login</a><a id="signup-box-link" href="#">Sign Up</a></div>
+        <div class="social-login"><a href="#"><i class="fa fa-facebook fa-lg"></i> Login in with facebook</a><a href="#"><i class="fa fa-google-plus fa-lg"></i> Log in with Google</a></div>
+        <form method="POST" class="email-login">
+            <div class="u-form-group">
+                <input type="email" name="email" id="email" placeholder="Email" autofocus="autofocus" />
             </div>
-            -->
-                        </div>
-                    </div>
-                </div>
+            <div class="u-form-group">
+                <input type="password" name="password" id="password" placeholder="Password" />
             </div>
-            <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2 scroll-me"><a href="/discover/" class="btn button-onsemble btn-onsemble">Start Now!</a><a href="/login/" class="btn button-onsemble btn-onsemble">Start Now!</a></div>
-        </div>
+            <p class="error"></p>
+            <div class="u-form-group">
+                <button type="submit">Log in</button>
+            </div>
+            <div class="u-form-group"><a href="#" class="forgot-password">Forgot password?</a></div>
+        </form>
+        <form class="email-signup">
+            <div class="u-form-group">
+                <input type="email" placeholder="Email" />
+            </div>
+            <div class="u-form-group">
+                <input type="password" placeholder="Password" />
+            </div>
+            <div class="u-form-group">
+                <input type="password" placeholder="Confirm Password" />
+            </div>
+            <div class="u-form-group">
+                <button>Sign Up</button>
+            </div>
+        </form>
     </div>
-    <!-- Home End-->
-    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME-->
-    <!-- CORE JQUERY-->
-    <script src="/assets/js/jquery-1.11.1.js"></script>
-    <!-- BOOTSTRAP SCRIPTS-->
-    <script src="/assets/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

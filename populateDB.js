@@ -9,13 +9,19 @@ var UserSchema = require('./app_server/models/User');
 var got = require('got');
 var mongoose = require('mongoose');
 var moment = require('moment');
+var async = require('async');
+
 // Database handler
 require('./app_server/models/db');
 
 // Random user API
 var URL = 'https://randomuser.me/api/';
 // Number of request to randomuser API
+<<<<<<< HEAD
 var NUM = 20;
+=======
+var NUM = 40;
+>>>>>>> 2b040f65aea96c683bcdafa9d26173f6b13a038e
 // Store all the JSON data from the request.
 var results = [];
 
@@ -33,10 +39,10 @@ function generatePeople(r) {
   o.email = r.results[0].user.email;
   o.password = r.results[0].user.password;
   o.profile = {
-    name: r.results[0].user.name.first + ' ' + r.results[0].user.name.last,
-    gender: r.results[0].user.gender,
+    name: capitalizeFirstLetter(r.results[0].user.name.first) + ' ' + capitalizeFirstLetter(r.results[0].user.name.last),
+    gender: r.results[0].user.gender.toUpperCase(),
     picture: r.results[0].user.picture.medium,
-    location: r.results[0].user.location.street + ', ' + r.results[0].user.location.city + ', ' + r.results[0].user.location.state + ', ' + r.results[0].user.location.zip,
+    location: capitalizeFirstLetter(r.results[0].user.location.city) + ', ' + capitalizeFirstLetter(r.results[0].user.location.state),
     videos: [
       'https://www.youtube.com/embed/tR87Jk8ECm0',
       "https://www.youtube.com/embed/1s9Xs6wEZHc",
@@ -79,14 +85,24 @@ function generatePeople(r) {
  * @param {Object} db - JSON object
  */
 function emptyThenInsert(db) {
-  UserSchema.collection.insert(db, function(err, data) {
-    if (err) console.log(err);
-    UserSchema.collection.find({}, function(err, data) {
+  UserSchema.remove({}, function(err) {
+    if(err) console.log(err);
+    UserSchema.collection.insert(db, function(err, data) {
       if (err) console.log(err);
+      UserSchema.collection.find({}, function(err, data) {
+        if (err) console.log(err);
+      });
+      process.exit(1);
     });
   });
 }
 
+/**
+ * Change the first character to uppercase
+ */
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 /**
  * Do n requests to ranmdom user api
  *
@@ -123,11 +139,10 @@ function runSequence(url, num) {
 runSequence(URL, NUM).then(function(results) {
   console.log(results.length + " documents has been inserted to the database.");
   var db = [];
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < NUM; i++) {
     var result = JSON.parse(results[i]);
     var d = generatePeople(result);
     db.push(d);
   }
   emptyThenInsert(db);
-  process.exit(1);
 });
