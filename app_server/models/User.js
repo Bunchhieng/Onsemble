@@ -60,25 +60,24 @@ var UserSchema = new mongoose.Schema({
  * Password hash middleware.
  * Thanks to https://github.com/sahat/hackathon-starter/blob/master/models/User.js
  */
-UserSchema.pre('save', function(next) {
-  var user = this;
-  if (!user.isModified('password')) {
-    return next();
-  }
-  bcrypt.genSalt(10, function(err, salt) {
-    if (err) {
-      return next(err);
-    }
-    bcrypt.hash(user.password, salt, null, function(err, hash) {
-      if (err) {
-        return next(err);
-      }
-      user.password = hash;
-      next();
-    });
-  });
-});
-
+// UserSchema.pre('save', function(next) {
+//   var user = this;
+//   if (!user.isModified('password')) {
+//     return next();
+//   }
+//   bcrypt.genSalt(10, function(err, salt) {
+//     if (err) {
+//       return next(err);
+//     }
+//     bcrypt.hash(user.password, salt, null, function(err, hash) {
+//       if (err) {
+//         return next(err);
+//       }
+//       user.password = hash;
+//       next();
+//     });
+//   });
+// });
 /**
  * Helper method for validating user's password.
  */
@@ -104,5 +103,38 @@ UserSchema.methods.gravatar = function(size) {
   var md5 = crypto.createHash('md5').update(this.email).digest('hex');
   return 'https://gravatar.com/avatar/' + md5 + '?s=' + size + '&d=retro';
 }
+
+/**
+ * Test data for sign in page
+ */
+var test = mongoose.model('User', UserSchema);
+var bun = new test({
+  _id: "",
+  username: "Bunchhieng",
+  email: "Bun@test.com",
+  password: "test",
+  profile: {
+    name: "Bunchhieng Soth",
+    gender: "MALE",
+    picture: "https://pbs.twimg.com/profile_images/529291042571313153/_lamCsdh.jpeg",
+    location: "Seuol, Korea",
+    videos: [
+      "https://www.youtube.com/embed/FZ2hcYlRupM",
+      "https://www.youtube.com/embed/rOjHhS5MtvA",
+      "https://www.youtube.com/embed/NHVE_GEBFwM",
+      "https://www.youtube.com/embed/0H7aV1XckCo",
+      "https://www.youtube.com/embed/6h5OgqqSYw4",
+      "https://www.youtube.com/embed/TlI_2nsAxPc",
+      "https://www.youtube.com/embed/l0rQFh-dG7s",
+      "https://www.youtube.com/embed/tIx6_Z5v88k",
+      "https://www.youtube.com/embed/L98SQRHVdEY"
+    ],
+    followers: 377296,
+    followings: 276841
+  }
+});
+bun.save(function(err, data) {
+  if (err) console.log(err);
+});
 
 module.exports = mongoose.model('User', UserSchema);
