@@ -5,6 +5,15 @@ block content
 		// Home End
 		section#stage-profile.container-fluid.step-on-stage
 			.col-md-7
+				img#pro-pic.profile-pic(src='/assets/img/team/santi.jpg')
+				dl#profile-info.dl-horizontal.lead.font-white
+					dt Name:
+					|                 
+					dd Santiago Paredes
+					|                 
+					dt Location:
+					|                 
+					dd Lowell, MA
 				img#pro-pic.profile-pic(src='#{data[0].profile.picture}')
 				dl#profile-info.dl-horizontal.lead.font-white
 					dt Name:
@@ -14,6 +23,7 @@ block content
 					dt Location:
 					|                 
 					dd #{data[0].profile.location}
+
 					|                 
 					dt Genre:
 					|                 
@@ -27,11 +37,13 @@ block content
 					dt Videos: 
 					dd #{data[0].profile.videos.length}
 				button.btn.btn-info.follow(type='button') Follow
+
 			|         
 			#spotlight.col-md-5
 				h2.spotlight-title.text-center.font-white Spotlight
 				|             
 				.text-center
+					iframe(src='https://www.youtube.com/embed/9c1i7id2zdE', width='425', height='200', frameborder='0', allowfullscreen='')
 					iframe(src='#{data[0].profile.videos[0]}' width='425' height='250' frameborder='0' allowfullscreen)
 		|     
 		section#releases.container-fluid
@@ -39,8 +51,17 @@ block content
 				.text-center
 					h3#recent-releases.font-black Recent Releases
 					|                 
+					.col-lg-4.col-md-4
+						iframe(src='https://www.youtube.com/embed/K7k-TmIl3yk', width='350', height='200', frameborder='0', allowfullscreen='')
+					|                 
+					.col-lg-4.col-md-4
+						iframe(src='https://www.youtube.com/embed/AgF6gLPKnH0', width='350', height='200', frameborder='0', allowfullscreen='')
+					|                 
+					.col-lg-4.col-md-4
+						iframe(src='https://www.youtube.com/embed/j9qFvdF5D58', width='350', height='200', frameborder='0', allowfullscreen='')
 					each v in data[0].profile.videos
 						iframe(src=v, width='400' height='250' frameborder='0' class='video' style='margin-left:20px;margin-top:20px;' allowfullscreen)
+
 		|     
 		.container-fluid.bg-blk
 			.col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2.text-center
@@ -58,4 +79,5 @@ block content
 						i.fa.fa-github
 	script(src='/assets/js/jquery-1.11.1.js')
 	script(src='/assets/js/bootstrap.js')
+
 	script(src='/js/main.js')

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--
+    Project Name: Onsemble
+    Crew: Justin Nguyen, Santiago Paredes, Bunchhieng Soth, Takyui Lo
+    Last Updated: March 1, 2016
+    -->
+    <link rel="icon" type="image/png" href="/assets/img/Onsemble.png">
+    <title>Stage - Onsemble</title>
+    <!-- Bootstrap CSS-->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Ion Icon Styles CSS-->
+    <link href="/assets/css/ionicons.css" rel="stylesheet">
+    <!-- Font Awesome CSS-->
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Fancy Box CSS-->
+    <link href="/assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/south-street/jquery-ui.css">
+    <!-- Viewpoint Animation CSS-->
+    <link href="/assets/css/animations.min.css" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body data-spy="scroll" data-target="#menu-section">
+    <!-- Navigation Bar-->
+    <div id="menu-section" class="navbar navbar-inverse navbar-fixed-top scroll-me">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <a href="/" class="pull-left"><img src="/assets/img/Onsemble-Light.png" class="navbar-logo"></a>
+                <p class="nav navbar-text nav-logo"><span style="color: #439756">n</span>semble</p>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/upload">UPLOAD</a></li>
+                    <li><a href="/discover/">DISCOVER</a></li>
+                    <li><a href="/stage/">STAGE</a></li>
+                    <li><a href="/logout/">LOG OUT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="login-box">
+        <div class="lb-header"><a id="login-box-link" href="#" class="active">Login</a><a id="signup-box-link" href="#">Sign Up</a></div>
+        <div class="social-login"><a href="#"><i class="fa fa-facebook fa-lg"></i> Login in with facebook</a><a href="#"><i class="fa fa-google-plus fa-lg"></i> Log in with Google</a></div>
+        <form method="POST" class="email-login">
+            <div class="u-form-group">
+                <input type="email" name="email" id="email" placeholder="Email" autofocus="autofocus" />
+            </div>
+            <div class="u-form-group">
+                <input type="password" name="password" id="password" placeholder="Password" />
+            </div>
+            <p class="error"></p>
+            <div class="u-form-group">
+                <button type="submit">Log in</button>
+            </div>
+            <div class="u-form-group"><a href="#" class="forgot-password">Forgot password?</a></div>
+        </form>
+        <form class="email-signup">
+            <div class="u-form-group">
+                <input type="email" placeholder="Email" />
+            </div>
+            <div class="u-form-group">
+                <input type="password" placeholder="Password" />
+            </div>
+            <div class="u-form-group">
+                <input type="password" placeholder="Confirm Password" />
+            </div>
+            <div class="u-form-group">
+                <button>Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

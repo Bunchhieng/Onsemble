@@ -14,6 +14,7 @@ var UserSchema = require('./app_server/models/User');
 
 var index = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
+var test = require('./app_server/routes/test');
 var discover = require('./app_server/routes/discover');
 var stage = require('./app_server/routes/stage');
 var login = require('./app_server/routes/login');
@@ -62,6 +63,7 @@ app.use('/upload', upload);
 app.use('/login', login);
 app.use('/', index);
 app.use('/users', users);
+app.use('/test', test);
 app.use('/discover', discover);
 app.use('/stage', stage);
 
