@@ -26,6 +26,13 @@ jQuery(function($) {
 		menuItems.removeClass('active').eq(curIndex).addClass('active');
 	});
 
+	var slider2 = $('#page-slider2 .carousel-inner').find('.item');
+	$('#page-slider2').on('slid.bs.carousel', function () {
+		var curIndex 	= slider.filter('.active').index();
+		var menuItems 	= $('.main-nav ul').find('li');
+		menuItems.removeClass('active').eq(curIndex).addClass('active');
+	});
+
 	//Contact Form
 	var form = $('#contact-form');
 	form.submit(function(event){
