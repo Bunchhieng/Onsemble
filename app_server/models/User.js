@@ -137,4 +137,33 @@ bun.save(function(err, data) {
   if (err) console.log(err);
 });
 
+var santi = new test({
+  _id: "",
+  username: "Santiago",
+  email: "Santi@test.com",
+  password: "test",
+  profile: {
+    name: "Santiago Paredes",
+    gender: "MALE",
+    picture: "https://pbs.twimg.com/profile_images/529291042571313153/_lamCsdh.jpeg",
+    location: "Shanghai, China",
+    videos: [
+      "https://www.youtube.com/embed/FZ2hcYlRupM",
+      "https://www.youtube.com/embed/rOjHhS5MtvA",
+      "https://www.youtube.com/embed/NHVE_GEBFwM",
+      "https://www.youtube.com/embed/0H7aV1XckCo",
+      "https://www.youtube.com/embed/6h5OgqqSYw4",
+      "https://www.youtube.com/embed/TlI_2nsAxPc",
+      "https://www.youtube.com/embed/l0rQFh-dG7s",
+      "https://www.youtube.com/embed/tIx6_Z5v88k",
+      "https://www.youtube.com/embed/L98SQRHVdEY"
+    ],
+    followers: 322,
+    followings: 276841
+  }
+});
+santi.save(function(err, data) {
+  if (err) console.log(err);
+});
+
 module.exports = mongoose.model('User', UserSchema);

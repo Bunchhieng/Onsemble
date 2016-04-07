@@ -5,9 +5,6 @@ require('../models/db');
 var UserSchema = require('../models/User');
 
 router.get('/', function(req, res, next) {
-  res.render('stage', {});
-});
-
   var user = req.baseUrl.slice(1);
   UserSchema.find({} , function(err, data) {
     if (err) console.log(err);
