@@ -14,7 +14,6 @@ var UserSchema = require('./app_server/models/User');
 
 var index = require('./app_server/routes/index');
 var users = require('./app_server/routes/users');
-var test = require('./app_server/routes/test');
 var discover = require('./app_server/routes/discover');
 var stage = require('./app_server/routes/stage');
 var login = require('./app_server/routes/login');
@@ -46,7 +45,7 @@ app.use(session({
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -59,11 +58,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routing
+app.use('/', index);
 app.use('/upload', upload);
 app.use('/login', login);
-app.use('/', index);
 app.use('/users', users);
-app.use('/test', test);
 app.use('/discover', discover);
 app.use('/stage', stage);
 
@@ -73,7 +71,7 @@ app.post('/login', function(req, res) {
     email: req.body.email
   }, function(err, user) {
     if (!user) {
-      res.render('login.jade', {
+      res.render('login', {
         error: 'Invalid email or password.'
       });
     } else {
@@ -82,7 +80,7 @@ app.post('/login', function(req, res) {
         req.session.user = user;
         res.redirect('/stage');
       } else {
-        res.render('login.jade', {
+        res.render('login', {
           error: 'Invalid email or password.'
         });
       }
@@ -104,7 +102,7 @@ app.get('/stage', function(req, res) {
         // expose the user to the template
         res.locals.user = user;
         // render the dashboard page
-        res.render('stage.jade');
+        res.render('stage');
       }
     });
   } else {

@@ -17,7 +17,6 @@ require('./app_server/models/db');
 // Random user API
 var URL = 'https://randomuser.me/api/';
 // Number of request to randomuser API
-var NUM = 20;
 var NUM = 40;
 // Store all the JSON data from the request.
 var results = [];
