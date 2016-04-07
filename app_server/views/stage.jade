@@ -36,7 +36,6 @@ block content
 					dd #{data[0].profile.followings}
 					dt Videos: 
 					dd #{data[0].profile.videos.length}
-				button.btn.btn-info.follow(type='button') Follow
 
 			|         
 			#spotlight.col-md-5
@@ -59,11 +58,11 @@ block content
 					|                 
 					.col-lg-4.col-md-4
 						iframe(src='https://www.youtube.com/embed/j9qFvdF5D58', width='350', height='200', frameborder='0', allowfullscreen='')
-					- var count = 0
-					each v in data[0].profile.videos
-						if count < 3
-							iframe(src=v, width='400' height='250' frameborder='0' class='video' style='margin-left:20px;margin-top:20px;' allowfullscreen)
-						- count++;
+					// - var count = 0
+					// each v in data[0].profile.videos
+					// 	if count < 3
+					// 		iframe(src=v, width='400' height='250' frameborder='0' class='video' style='margin-left:20px;margin-top:20px;' allowfullscreen)
+					// 	- count++;
 
 		|     
 		.container-fluid.bg-blk
