@@ -1,24 +1,22 @@
 var express = require('express');
 var router = express.Router();
+var jwt = require('express-jwt');
+// var auth = jwt({
+//   secret: process.env.JWT_SECRET,
+//   userProperty: 'payload'
+// });
+var ctrlOnsemble = require('../controllers/stage');
+var ctrlAuth = require('../controllers/authentication');
 
-// Database connection handler
-require('../models/db');
-var UserSchema = require('../models/User');
-/* Locations pages */
-router.get('/', function(req, res, next) {
-  UserSchema.find({}, function(err, data) {
-    if (err) console.log(err);
-    res.render('index', {
-      results: data
-    });
-  });
-});
-
-// TODO: use only 1 file for route
-// router.get('/', ctrOnsemble.home);
-// router.get('/stage/:userid', ctrOnsemble.addUser);
-// router.get('/stage/:userid', ctrOnsemble.updateUser);
-// router.get('/stage/:userid', ctrOnsemble.deleteUser);
-// router.get('/discover', ctrOnsemble.discover);
+router.get('/', ctrlOnsemble.home);
+router.get('/stage', ctrlOnsemble.stage);
+router.get('/upload', ctrlOnsemble.upload);
+// router.get('/stage/:userid', ctrOnsemble.user);
+router.get('/discover', ctrlOnsemble.discover);
+//
+// authentication
+router.post('/register', ctrlAuth.register);
+router.get('/login', ctrlOnsemble.login);
+router.post('/login', ctrlAuth.login);
 
 module.exports = router;

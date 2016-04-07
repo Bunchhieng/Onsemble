@@ -2,6 +2,7 @@ var mongoose = require('mongoose'),
   crypto = require('crypto'),
   // Lib to help you hash passwords.
   bcrypt = require('bcrypt-nodejs');
+var jwt = require('jsonwebtoken');
 
 /**
  * bsoth 02/16/2016 Tuesday
@@ -53,91 +54,33 @@ var UserSchema = new mongoose.Schema({
     }
   },
   resetPasswordToken: String,
-  resetPasswordExpires: Date
+  resetPasswordExpires: Date,
+  hash: String,
+  salt: String
 });
 
-/**
- * Password hash middleware.
- * Thanks to https://github.com/sahat/hackathon-starter/blob/master/models/User.js
- */
-// UserSchema.pre('save', function(next) {
-//   var user = this;
-//   if (!user.isModified('password')) {
-//     return next();
-//   }
-//   bcrypt.genSalt(10, function(err, salt) {
-//     if (err) {
-//       return next(err);
-//     }
-//     bcrypt.hash(user.password, salt, null, function(err, hash) {
-//       if (err) {
-//         return next(err);
-//       }
-//       user.password = hash;
-//       next();
-//     });
-//   });
-// });
-/**
- * Helper method for validating user's password.
- */
-UserSchema.methods.comparePassword = function(canidatePassword, cb) {
-  bcrypt.compare(canidatePassword, this.password, function(err, isMatch) {
-    if (err) {
-      return cb(err);
-    }
-    cb(null, isMatch);
-  });
-}
+// Added on 04/07/2016 bsoth
+UserSchema.methods.setPassword = function(password) {
+  this.salt = crypto.randomBytes(16).toString('hex');
+  this.hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64).toString('hex');
+};
 
-/**
- * Helper method for getting user's gravatar
- */
-UserSchema.methods.gravatar = function(size) {
-  if (!size) {
-    size = 200;
-  }
-  if (!this.email) {
-    return 'https://gravatar.com/avatar/?s=' + size + '&d=retro';
-  }
-  var md5 = crypto.createHash('md5').update(this.email).digest('hex');
-  return 'https://gravatar.com/avatar/' + md5 + '?s=' + size + '&d=retro';
-}
+UserSchema.methods.validPassword = function(password) {
+  var hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64).toString('hex');
+  return this.hash === hash;
+};
 
-/**
- * Test data for sign in page
- */
-var test = mongoose.model('User', UserSchema);
+UserSchema.methods.generateJwt = function() {
+  var expiry = new Date();
+  expiry.setDate(expiry.getDate() + 7);
 
-// // Dummy database DON'T REMOVE THIS!
-// var bun = new test({
-//   _id: "",
-//   username: "Bunchhieng",
-//   email: "Bun@test.com",
-//   password: "test",
-//   profile: {
-//     name: "Bunchhieng Soth",
-//     gender: "MALE",
-//     picture: "https://pbs.twimg.com/profile_images/529291042571313153/_lamCsdh.jpeg",
-//     location: "Seuol, Korea",
-//     videos: [
-//       "https://www.youtube.com/embed/FZ2hcYlRupM",
-//       "https://www.youtube.com/embed/rOjHhS5MtvA",
-//       "https://www.youtube.com/embed/NHVE_GEBFwM",
-//       "https://www.youtube.com/embed/0H7aV1XckCo",
-//       "https://www.youtube.com/embed/6h5OgqqSYw4",
-//       "https://www.youtube.com/embed/TlI_2nsAxPc",
-//       "https://www.youtube.com/embed/l0rQFh-dG7s",
-//       "https://www.youtube.com/embed/tIx6_Z5v88k",
-//       "https://www.youtube.com/embed/L98SQRHVdEY"
-//     ],
-//     followers: 377296,
-//     followings: 276841
-//   }
-// });
-// bun.save(function(err, data) {
-//   if (err) console.log(err);
-// });
+  return jwt.sign({
+    _id: this._id,
+    email: this.email,
+    name: this.name,
+    exp: parseInt(expiry.getTime() / 1000),
+  }, process.env.JWT_SECRET);
+};
 
 // Export this model as public
 module.exports = mongoose.model('User', UserSchema);
