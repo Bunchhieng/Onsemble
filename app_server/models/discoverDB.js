@@ -9,6 +9,8 @@
     music genre
 */
 
+var mongoose = require('mongoose');
+
 var DiscoverSchema = new mongoose.Schema({
     genre: String,
     video: {
@@ -16,7 +18,10 @@ var DiscoverSchema = new mongoose.Schema({
             type: String,
             default: ''
         },
-        url: String,
+        url: {
+            type: String,
+            required: true
+        }
         description: {
             type: String,
             default: ''
