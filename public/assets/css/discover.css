@@ -1,6 +1,5 @@
 /* Fonts */
 
-
 /*@import url(https://fonts.googleapis.com/css?family=Candal);
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
@@ -15,26 +14,33 @@ body {
 .onsemble-green {
     color: #439756;
 }
+
 .onsemble-grey {
     color: #2c2f32;
 }
+
 .font-white {
     color: #FFFFFF;
 }
+
 .font-black {
     color: #222;
 }
+
 .bg-blk {
     background-color: #222;
 }
+
 h1.title {
     font-size: 80pt;
     font-family: 'Candal', sans-serif;
 }
+
 .onsemble-logo {
     max-width: 100pt;
     margin-top: -65px;
 }
+
 body {
     background: -webkit-linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%);
     /* Chrome 10+, Saf5.1+ */
@@ -47,49 +53,65 @@ body {
     background: linear-gradient(90deg, #D9EBCA 10%, #4C8B44 90%);
     /* W3C */
 }
+
 body {
     background: url('../img/guitar-wallpaper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 ul {
     list-style: none;
     padding: 0
 }
+
 a {
     color: #FFFFFF;
     text-shadow: 1px 1px 1px #000;
 }
+
 a:hover {
     color: #FFFFFF;
 }
+
 a:hover .fa {
     color: #439756;
 }
+
 
 /*************************
 *******Navigation CSS*****
 **************************/
 
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
     background-color: transparent;
     border-bottom: 1px solid #FFFFFF;
 }
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
     border-color: transparent;
 }
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
     background-color: #439756;
 }
+
 .navbar-inverse .navbar-toggle {
     border-color: #439756;
 }
+
 .navbar-logo {
     max-width: 50px;
 }
+
 .navbar-inverse .navbar-text {
     color: #FFFFFF;
 }
+
 
 /*************************
 *******Home Page CSS******
@@ -99,18 +121,23 @@ a:hover .fa {
     float: none;
     margin: 0 auto;
 }
+
 #discover-page1 .caption {
     font-weight: 600;
     font-size: 18px;
 }
+
 #discover-page1 h2.heading {
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 15px;
 }
-#page-slider > .carousel-inner, #page-slider .item > .container {
+
+#page-slider > .carousel-inner,
+#page-slider .item > .container {
     height: 100%;
 }
+
 #page-slider .item > .container {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -120,38 +147,47 @@ a:hover .fa {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .vertical-middle {
     height: 100%;
     width: 100%;
     display: table;
 }
+
 .vertical-middle > div {
     display: table-cell;
     vertical-align: middle;
 }
+
 #welcome-page {
     /*margin-top: 0px;*/
     padding: 0px;
 }
+
 #page-slider .item {
     height: 100%;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .welcome-page-left {
     left: 20px;
 }
+
 .welcome-page-right {
     right: 20px;
 }
-.welcome-page-left, .welcome-page-right {
+
+.welcome-page-left,
+.welcome-page-right {
     position: absolute;
     top: 50%;
     margin-top: -35px;
     font-size: 57px;
     z-index: 10;
 }
+
 .page-header {
     font-size: 64px;
     line-height: 64px;
@@ -162,20 +198,24 @@ a:hover .fa {
     font-weight: 700;
     text-shadow: 1px 1px 1px #000;
 }
+
 .page-subheader {
     margin-bottom: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     text-shadow: 1px 1px 1px #000;
 }
+
 .entry-title {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
 }
+
 .overlay-container {
     display: block;
     position: relative;
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -188,73 +228,79 @@ a:hover .fa {
     -webkit-transition: opacity 400ms;
     transition: opacity 400ms;
 }
+
 .overlay-container:hover .overlay {
     opacity: 1;
 }
+
 a.readmore {
     font-size: 36px;
     line-height: 36px;
 }
+
 .box {
     background: rgba(0, 0, 0, .2);
     padding: 20px;
     -webkit-transition: background-color 400ms;
     transition: background-color 400ms;
 }
+
 .box:hover {
     background: rgba(0, 0, 0, .5);
 }
+
 #footer {
     margin: 30px 0;
 }
 
 /* Disabling standard bootstrap style */
-
 .pager li > a, .pager li > span {
     background-color: transparent;
     /*border: none;*/
 }
 .pager li > a:focus {
-    background-color: transparent;
+  background-color: transparent;
 }
 a:focus {
     color: #fff;
 }
 
-/* Video CSS */
 
-img {
-    max-width: 100%;
-}
+/* Video CSS */
+img { max-width:100%; }
+
+iframe {margin: 0;
+    padding: 0;
+    border: none;}
+
 a {
     -webkit-transition: all 150ms ease;
     -moz-transition: all 150ms ease;
     -ms-transition: all 150ms ease;
     -o-transition: all 150ms ease;
-    transition: all 150ms ease;
-}
+    transition: all 150ms ease; 
+    }
+    
 a:hover {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    /* IE 8 */
-    filter: alpha(opacity=50);
-    /* IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+    filter: alpha(opacity=50); /* IE7 */
     opacity: 0.6;
     text-decoration: none;
 }
+
 h1 {
     padding: 30px;
     font-size: 40pt;
 }
-ul.thumbnails {
-    margin-bottom: 0px;
-}
-.thumbnails li> .fff .caption {
-    padding: 10px
+
+
+ul.thumbnails { margin-bottom: 0px;}
+
+.thumbnails li> .fff .caption { 
+    padding:10px
 }
 
 /* Page Header */
-
-
 /*.page-header {
     background: #f9f9f9;
     margin: -30px -40px 40px;
@@ -263,35 +309,40 @@ ul.thumbnails {
     color: #999;
     text-transform: uppercase;
 }*/
-
+    
 .page-header h3 {
     line-height: 0.88rem;
     color: #000;
 }
-ul.thumbnails {
+
+ul.thumbnails { 
     margin-bottom: 0px;
 }
 
-/* Thumbnail Box */
 
+
+/* Thumbnail Box */
 div .caption {
     background-color: #222;
 }
 .caption h4 {
     color: #FFFFFF;
 }
-.caption p {
+
+.caption p {  
     color: #FFFFFF;
+
 }
 
-/* Carousel Control */
 
+
+/* Carousel Control */
 .control-box {
     text-align: center;
     width: 100%;
-    margin-top: 50px;
+    margin-top:50px;
 }
-.carousel-control {
+.carousel-control{
     background: #666;
     border: 0px;
     border-radius: 0px;
@@ -306,50 +357,23 @@ div .caption {
     width: 15px;
 }
 
-/* Mobile Only */
 
+/* Mobile Only */
 @media (max-width: 767px) {
     .page-header, .control-box {
         text-align: center;
-    }
+    } 
 }
 @media (max-width: 479px) {
     .caption {
         word-break: break-all;
     }
 }
-li {
-    list-style-type: none;
-}
-::selection {
-    background: #ff5e99;
-    color: #FFFFFF;
-    text-shadow: 0;
-}
-::-moz-selection {
-    background: #ff5e99;
-    color: #FFFFFF;
-}
+
+
+li { list-style-type:none;}
+
+::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
+::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
 /*End Video CSS*/
-
-
-/*Search box in discover page*/
-
-#search {
-    display: block;
-    text-align: center;
-}
-
-#searchbox {
-  width: 500px;
-}
-#filtersubmit {
-    position: relative;
-    z-index: 1;
-    left: -25px;
-    top: 1px;
-    color: #7B7B7B;
-    cursor:pointer;
-    width: 0;
-}

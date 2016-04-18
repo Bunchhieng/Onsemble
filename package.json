@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/justintimeforlunch/getting-mean.git"
+    "url": "https://github.com/Bunchhieng/Onsemble"
   },
   "dependencies": {
     "async": "^1.5.2",
