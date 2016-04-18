@@ -201,7 +201,7 @@ a:hover .fa {
 
 .page-subheader {
     margin-bottom: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     text-shadow: 1px 1px 1px #000;
 }
 
@@ -268,6 +268,10 @@ a:focus {
 
 /* Video CSS */
 img { max-width:100%; }
+
+iframe {margin: 0;
+    padding: 0;
+    border: none;}
 
 a {
     -webkit-transition: all 150ms ease;
@@ -373,4 +377,3 @@ li { list-style-type:none;}
 ::-moz-selection { background: #ff5e99; color: #FFFFFF; }
 
 /*End Video CSS*/
-
