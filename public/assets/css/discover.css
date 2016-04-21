@@ -254,13 +254,26 @@ a.readmore {
 }
 
 /* Disabling standard bootstrap style */
-.pager li > a, .pager li > span {
+.pager li > a, .pager li > span, .pager div > a {
     background-color: transparent;
     /*border: none;*/
 }
 .pager li > a:focus {
   background-color: transparent;
 }
+
+
+.pager div > a{
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+
+
 a:focus {
     color: #fff;
 }
@@ -334,7 +347,9 @@ div .caption {
 
 }
 
-
+.scroll-down {
+    float: right;
+}
 
 /* Carousel Control */
 .control-box {
