@@ -1,0 +1,250 @@
+Santiago Paredes
+Bruno Mars Medley (Improv)
+
+    var boston_OLD =                 `<div id="myCarousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <ul class="thumbnails">
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video0"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Santiago Paredes
+                                            </h4>
+                                            <p>
+                                                Bruno Mars Medley (Improv)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video1"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Megan Lee
+                                            </h4>
+                                            <p>
+                                                Unconditionally (Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video2"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Alex Serra
+                                            </h4>
+                                            <p>
+                                                Georgia on My Mind (Ray Charles Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /Slide1-->
+                        <!-- -->
+                        <div class="item">
+                            <ul class="thumbnails">
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video3"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Ernie Halter
+                                            </h4>
+                                            <p>
+                                                Cyclone (Acoustic Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video4"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Justin Nozuka
+                                            </h4>
+                                            <p>
+                                                Carried You (Original)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video5"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                John Mayer (Trio)
+                                            </h4>
+                                            <p>
+                                                I Got A Woman (Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /Slide2-->
+                        <div class="item">
+                            <ul class="thumbnails">
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video6"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Tori Kelly
+                                            </h4>
+                                            <p>
+                                                Paper Hearts (Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video7"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Santiago Paredes
+                                            </h4>
+                                            <p>
+                                                Cyclone (Cover ft. Ernie Halter)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id="youtube_video8"></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Justin Timberlake
+                                            </h4>
+                                            <p>
+                                                Sitting On The Dock Of The Bay (Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /Slide3-->
+                    </div>
+                    <ul class="control-box pager">
+                        <li>
+                            <a data-slide="prev" href="#myCarousel"><i class="fa fa-arrow-left fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a data-slide="next" href="#myCarousel"><i class="fa fa-arrow-right fa-3x"></i></a>
+                        </li>
+
+                        <!-- <div class="scroll-down">
+                            <a href="#genre2"><i class="fa fa-arrow-down fa-3x"></i></a>
+                        </div> -->
+                    </ul>
+                </div>`;
+
+    var lowell = `                <div id="myCarousel2" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <ul class="thumbnails">
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id='youtube_video9'></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Charlina Denny
+                                            </h4>
+                                            <p>
+                                                I Can't Feel My Face (Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id='youtube_video10'></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Ahmir
+                                            </h4>
+                                            <p>
+                                                Thinkin' Out Loud (A Cappela)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id='youtube_video11'></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Santiago Paredes
+                                            </h4>
+                                            <p>
+                                                Blank Space (Contest Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /Slide1-->
+                        <!-- -->
+                        <div class="item">
+                            <ul class="thumbnails">
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id='youtube_video12'></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Alessia Cara
+                                            </h4>
+                                            <p>
+                                                Here (Stripped)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id='youtube_video13'></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Dave Ripper
+                                            </h4>
+                                            <p>
+                                                Get Lucky (Jazz Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="video-pad">
+                                        <div id='youtube_video14'></div>
+                                        <div class="title-box">
+                                            <h4>
+                                                Bluey Robinson
+                                            </h4>
+                                            <p>
+                                                Just Friends (Cover)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /Slide2-->
+                    </div>
+                    <ul class="control-box pager">
+                        <li>
+                          <a data-slide="prev" href="#myCarousel2"><i class="fa fa-arrow-left fa-3x"></i></a>  
+                        </li>
+                        <li>
+                            <a data-slide="next" href="#myCarousel2"><i class="fa fa-arrow-right fa-3x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>`;

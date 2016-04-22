@@ -1,183 +1,92 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
     <!--
     Project Name: Onsemble
     Crew: Justin Nguyen, Santiago Paredes, Bunchhieng Soth, Takyui Lo
     Last Updated: March 1, 2016
     -->
-    <link rel="icon" type="image/png" href="/assets/img/Onsemble.png">
-    <title>Stage - Onsemble</title>
-    <!-- Bootstrap CSS-->
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
-    <!-- Ion Icon Styles CSS-->
-    <link href="/assets/css/ionicons.css" rel="stylesheet">
-    <!-- Font Awesome CSS-->
-    <link href="/assets/css/font-awesome.css" rel="stylesheet">
-    <!-- Fancy Box CSS-->
-    <link href="/assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/south-street/jquery-ui.css">
-    <!-- Viewpoint Animation CSS-->
-    <link href="/assets/css/animations.min.css" rel="stylesheet">
-    <!-- Custom CSS-->
-    <link href="/assets/css/main.css" rel="stylesheet">
-    <link href="/assets/css/discover.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body data-spy="scroll" data-target="#menu-section">
-    <!-- Navigation Bar-->
-    <div id="menu-section" class="navbar navbar-inverse navbar-fixed-top scroll-me">
-        <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a href="/" class="pull-left"><img src="/assets/img/Onsemble-Light.png" class="navbar-logo"></a>
-            <p class="nav navbar-text nav-logo"><span style="color: #439756">n</span>semble</p>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/upload">UPLOAD</a></li>
-                <li><a href="/discover/">DISCOVER</a></li>
-                <li><a href="/stage/">STAGE</a></li>
-                <% if (login) { %>
-                  <li><a href="/logout/">LOG OUT</a></li>
-                <% } %>
-                <li><a href="/logout/">LOG IN</a></li>
-            </ul>
-            <form class="navbar-form" id="search" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search" id="searchbox">
-                    <i id="filtersubmit" class="fa fa-search"></i>
+        <link rel="icon" type="image/png" href="/assets/img/Onsemble.png">
+        <title>
+            Stage - Onsemble
+        </title>
+        <!-- Bootstrap CSS-->
+        <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <!-- Ion Icon Styles CSS-->
+        <link href="/assets/css/ionicons.css" rel="stylesheet" type="text/css">
+        <!-- Font Awesome CSS-->
+        <link href="/assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+        <!-- Fancy Box CSS-->
+        <link href="/assets/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/south-street/jquery-ui.css" type="text/css">
+        <!-- Viewpoint Animation CSS-->
+        <link href="/assets/css/animations.min.css" rel="stylesheet" type="text/css">
+        <!-- Custom CSS-->
+        <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/discover.css" rel="stylesheet" type="text/css">
+        <!--JS-->
+        <script src="/assets/js/jquery-1.11.1.js" type="text/javascript"></script>
+        <script src="/assets/js/discover.js" type="text/javascript"></script>
+        <script src="https://www.youtube.com/iframe_api" type='text/javascript'></script>
+        <script src="/assets/js/youtubeVideos.js" type="text/javascript"></script>
+    </head>
+    <body data-spy="scroll" data-target="#menu-section">
+        <!-- Navigation Bar-->
+        <div id="menu-section" class="navbar navbar-inverse navbar-fixed-top scroll-me">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"></button> <a href="/" class="pull-left"><img src="/assets/img/Onsemble-Light.png" class="navbar-logo"></a>
+                    <p class="nav navbar-text nav-logo">
+                        <span style="color: #439756">n</span>semble
+                    </p>
                 </div>
-                <!-- <button type="submit" class="btn btn-default">Submit</button> -->
-            </form>
-        </div>
-    </div>
-    <!-- Discover-->
-
-    <section id="discover" class="container">
-        <div class="text-center">
-            <h2 class="page-header">Discover</h2>
-            <h3 class="page-subheader">Trending Now (On YouTube)</h3>
-        </div>
-        <div class="col-xs-12 tab-content">
-            <div id="myCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <ul class="thumbnails">
-                            <li class="col-sm-4">
-                                <div class="fff">
-                                    <iframe src="https://www.youtube.com/embed/tR87Jk8ECm0" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                                    <div class="title-box">
-                                        <h4>Santiago Paredes</h4>
-                                        <p>Happy Birthday (For Ben Knight)</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-sm-4">
-                                <div class="fff">
-                                    <iframe src="https://www.youtube.com/embed/1s9Xs6wEZHc" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                                    <div class="title-box">
-                                        <h4>Megan Lee</h4>
-                                        <p>Unconditionally (Cover)</p>
-                                    </div>
-                                </div>
-                    </div>
-                    </li>
-                    <li class="col-sm-4">
-                        <div class="fff">
-                            <iframe src="https://www.youtube.com/embed/CI4TMwFqEgA" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                            <div class="title-box">
-                                <h4>Alex Serra</h4>
-                                <p>Georgia on My Mind (Ray Charles Cover)</p>
-                            </div>
-                        </div>
-                    </li>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--<li>
+                            <a href="/upload">UPLOAD</a>
+                        </li>-->
+                        <li>
+                            <a href="/discover/">DISCOVER</a>
+                        </li>
+                        <li>
+                            <a href="/stage/">STAGE</a>
+                        </li>
+                        <!--<li>
+                            <a href="/logout/">LOG OUT</a>
+                        </li>-->
                     </ul>
                 </div>
-                <!-- /Slide1-->
-                <!-- -->
-                <div class="item">
-                    <ul class="thumbnails">
-                        <li class="col-sm-4">
-                            <div class="fff">
-                                <iframe src="https://www.youtube.com/embed/NHVE_GEBFwM" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                                <div class="title-box">
-                                    <h4>Ernie Halter</h4>
-                                    <p>Cyclone (Acoustic Cover)</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-4">
-                            <div class="fff">
-                                <iframe src="https://www.youtube.com/embed/0H7aV1XckCo" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                                <div class="title-box">
-                                    <h4>Justin Nozuka</h4>
-                                    <p>Carried You (Original)</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-4">
-                            <div class="fff">
-                                <iframe src="https://www.youtube.com/embed/6h5OgqqSYw4" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                                <div class="title-box">
-                                    <h4>John Mayer (Trio)</h4>
-                                    <p>I Got A Woman (Cover)</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /Slide2-->
-                <div class="item">
-                    <ul class="thumbnails">
-                        <li class="col-sm-4">
-                            <div class="fff">
-                                <iframe src="https://www.youtube.com/embed/l0rQFh-dG7s" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                                <div class="title-box">
-                                    <h4>Tori Kelly</h4>
-                                    <p>Paper Hearts (Cover)</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-4">
-                            <div class="fff">
-                                <iframe src="https://www.youtube.com/embed/9c1i7id2zdE" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                                <div class="title-box">
-                                    <h4>Santiago Paredes</h4>
-                                    <p>Cyclone (Cover ft. Ernie Halter)</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-4">
-                            <div class="fff">
-                                <iframe src="https://www.youtube.com/embed/tIx6_Z5v88k" width="320" height="240" frameborder="0" allowfullscreen=""></iframe>
-                                <div class="title-box">
-                                    <h4>Justin Timberlake</h4>
-                                    <p>Sitting On The Dock Of The Bay (Cover)</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /Slide3-->
             </div>
-            <ul class="control-box pager">
-                <li><a data-slide="prev" href="#myCarousel"><i class="fa fa-arrow-left fa-3x"></i></a></li>
-                <li><a data-slide="next" href="#myCarousel"><i class="fa fa-arrow-right fa-3x"></i></a></li>
-            </ul>
-        </div>
-        </div>
-        <!-- /.control-box-->
-        <!-- /#myCarousel-->
-        <!-- /.col-xs-12-->
-    </section>
-    <script src="/assets/js/jquery-1.11.1.js" type="text/javascript"></script>
-    <script src="/assets/js/bootstrap.js" type="text/javascript"></script>
-    <script src="/assets/js/main.js" type="text/javascript"></script>
-</body>
+        </div><!-- Discover-->
+        <section id="discover" class="container">
+            <div class="text-center">
+                <h2 class="page-header">
+                    Discover
+                </h2>
+            </div>
+            <div class="col-xs-12 tab-content">
+                <div class="col-md-4 col-md-offset-4">
+                    <select class="div-toggle form-control"data-target=".stream1">
+                      <option value="">Select a stream...</option>
+                      <option value="boston" data-show=".boston">Trending Now (in Boston)</option>
+                      <option value="lowell" data-show=".lowell">Top Acoustic (in Lowell)</option>
+                    </select>
+                </div>
+                <div class="stream1">
+                  <div class="boston hide"></div>
+                  <div class="lowell hide"></div>
+                </div>
+            </div>
+        </section>
 
+<script src="/assets/js/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="/assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="/assets/js/main.js" type="text/javascript"></script>
+<script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+</body>
 </html>

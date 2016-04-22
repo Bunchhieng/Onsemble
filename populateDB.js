@@ -4,6 +4,7 @@
  * This file is use to populate our database.
  */
 
+
 var UserSchema = require('./app_server/models/User');
 // Using got to make HTTP request, it's lightweight compare to request
 var got = require('got');

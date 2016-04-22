@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('/assets/img/bg-rock.jpg') no-repeat center center fixed; 
+    background: url('../img/bg-rock.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -23,7 +23,7 @@ body {
 #mission {
     padding: 50px 20px 5px 50px;
     text-align: center;
-    padding-top: 225px;
+    padding-top: 25px;
 }
 
 #mission p {

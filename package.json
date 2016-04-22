@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "engines": {
     "node": "~0.10.41",
@@ -11,13 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/justintimeforlunch/getting-mean.git"
+    "url": "https://github.com/Bunchhieng/Onsemble.git"
   },
   "dependencies": {
+    "ejs": "~1.0.0",
     "async": "^1.5.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.13.2",
-    "connect-mongo": "^1.1.0",
+    "connect-mongo": "1.0.0",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "dotenv": "^2.0.0",
