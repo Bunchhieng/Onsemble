@@ -31,7 +31,7 @@ jQuery(function($) {
 	var boston_urls = ['https://www.youtube.com/embed/V0Gzsdmp3Yc', 'https://www.youtube.com/embed/1s9Xs6wEZHc', 'https://www.youtube.com/embed/CI4TMwFqEgA', 'https://www.youtube.com/embed/NHVE_GEBFwM', 'https://www.youtube.com/embed/0H7aV1XckCo', 'https://www.youtube.com/embed/6h5OgqqSYw4', 'https://www.youtube.com/embed/l0rQFh-dG7s', 'https://www.youtube.com/embed/9c1i7id2zdE', 'https://www.youtube.com/embed/tIx6_Z5v88k'];
 	var lowell_urls = ['https://www.youtube.com/embed/J079e95caB4', 'https://www.youtube.com/embed/jASmF2nsBEI', 'https://www.youtube.com/embed/CnWCF3ND09I', 'https://www.youtube.com/embed/XO1bQ5JSYcY', 'https://www.youtube.com/embed/T-oJCNiiLCQ', 'https://www.youtube.com/embed/S2UfGtHCH2s']
 
-	// Dict of streams
+	// Dict of discover streams
 	var streams = {'boston': boston_urls, 'lowell': lowell_urls};
 
 	function setYouTubeTitle(streamName, VIDEOID, id) {
@@ -45,22 +45,17 @@ jQuery(function($) {
             document.getElementById(streamName+'name'+id).innerHTML = JSON.stringify(body.items[0].snippet.channelTitle).replace(/\"/g, "");
         });
 	}
-	// Need to limit how many layers of a stream are made based on how many
-	// videos are in list
+
 	function buildStream(streamName, url_list) {
-
 		var html = [];
-		var i = 0;
-
+		var i = 0; // warning! DO NOT USE i AS AN INCREMENTER IN ANY LOOPS
+		var numLayers = Math.ceil(url_list.length/3);
 		buildCarousel(streamName);
-		buildLayer(streamName, 'active');
-		buildLayer(streamName, '');
-		buildLayer(streamName, '');
+		stackLayers(streamName, numLayers);
 		buildDataSliders(streamName);
-
 		return html.join("");
 
-		// Builder functions
+		// Builder and stacking functions
 		function buildCarousel(streamName) {
 			html.push('<div id="'+streamName+'" class="carousel slide">');
 			html.push('<div class="carousel-inner">');
@@ -76,6 +71,13 @@ jQuery(function($) {
 			html.push('</div>');
 			html.push('</div>');
 			html.push('</li>');
+		}
+
+		function stackLayers(streamName, numLayers) {
+			buildLayer(streamName, 'active');
+			for (var j = 1; j < numLayers; j++) {
+				buildLayer(streamName, '');
+			}
 		}
 
 		function buildLayer(streamName, active) {
@@ -112,7 +114,8 @@ jQuery(function($) {
 
 	// get the names/types of streams
 	var keys = Object.keys(streams);
-	// loop through the stream names, build them, and place their content on the page
+
+	// loop through the stream names, build them, and place their elements on the page
 	for (var i = 0; i < keys.length; i++) {
 		var key = keys[i];
 		tempStream = buildStream(key, streams[key]);
@@ -130,48 +133,4 @@ jQuery(function($) {
 	    }
 	}
 
-	//Contact Form
-	var form = $('#contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('.form-status');
-		$.ajax({
-			url: $(this).attr('action'),
-			beforeSend: function(){
-				form_status.find('.form-status-content').html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn();
-			}
-		}).done(function(data){
-			form_status.find('.form-status-content').html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
-		});
-	});
-
-
 });
-
-	// var slider = $('#page-slider .carousel-inner').find('.item');
-	// $('#page-slider').on('slid.bs.carousel', function () {
-	// 	var curIndex 	= slider.filter('.active').index();
-	// 	var menuItems 	= $('.main-nav ul').find('li');
-	// 	menuItems.removeClass('active').eq(curIndex).addClass('active');
-	// });
-
-	// var slider2 = $('#page-slider2 .carousel-inner').find('.item');
-	// $('#page-slider2').on('slid.bs.carousel', function () {
-	// 	var curIndex 	= slider.filter('.active').index();
-	// 	var menuItems 	= $('.main-nav ul').find('li');
-	// 	menuItems.removeClass('active').eq(curIndex).addClass('active');
-	// });
-
-
-	// http://stackoverflow.com/questions/6164507/change-the-content-of-a-div-based-on-selection-from-drop-down-menu
-	// $('select.div-toggle').change(function(){
-	//   var target = $(this).data('target');
-	//   var show = $("option:selected", this).data('show');
-	//   $(target).children().addClass('hide');
-	//   $(show).removeClass('hide');
-	// });
-
-	// var myCarousel = $('#myCarousel').html();
-	// var test = $('.boston').html(myCarousel)
-	// var myCarousel2 = $('#myCarousel2').html();
-	// var test2 = $('.lowell').html(myCarousel)
