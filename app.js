@@ -8,16 +8,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
-var flash = require('express-flash');
 
 // Bring in database
 require('./app_server/models/db');
 require('./app_server/config/passport');
 var UserSchema = require('./app_server/models/User');
 
-// Controllers (route handler)
-var userController = require('./app_server/controllers/authentication');
-var homeController = require('./app_server/controllers/home');
+var index = require('./app_server/routes/index');
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -52,24 +49,87 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: true
+  extended: false
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(flash());
-// Primary app routes
-app.get('/', homeController.index);
-app.get('/stage', homeController.stage);
-app.get('/stage/:userid', userController.getUser);
-app.get('/discover', homeController.discover);
-app.get('/login', userController.getLogin);
-app.post('/login', userController.postLogin);
-app.get('/logout', userController.logout);
-app.get('/upload', userController.getUpload);
-app.get('/forgot', userController.getForgot);
-app.post('/register', userController.register);
+
+// Routing
+app.use('/', index);
+
+// Log in and logout logic
+// app.post('/login', function(req, res) {
+//   UserSchema.findOne({
+//     email: req.body.email
+//   }, function(err, user) {
+//     if (!user) {
+//       res.render('login', {
+//         error: 'Invalid email or password.'
+//       });
+//     } else {
+//       if (req.body.password === user.password) {
+//         // sets a cookie with the user's info
+//         req.session.user = user;
+//         res.redirect('/stage');
+//       } else {
+//         res.render('login', {
+//           error: 'Invalid email or password.'
+//         });
+//       }
+//     }
+//   });
+// });
+// app.get('/stage', function(req, res) {
+//   if (req.session && req.session.user) { // Check if session exists
+//     // lookup the user in the DB by pulling their email from the session
+//     UserSchema.findOne({
+//       email: req.session.user.email
+//     }, function(err, user) {
+//       if (!user || user.email) {
+//         // if the user isn't found in the DB, reset the session info and
+//         // redirect the user to the login page
+//         req.session.reset();
+//         res.redirect('/login');
+//       } else {
+//         // expose the user to the template
+//         res.locals.user = user;
+//         // render the dashboard page
+//         res.render('stage');
+//       }
+//     });
+//   } else {
+//     res.redirect('/login');
+//   }
+// });
+// app.get('/logout', function(req, res) {
+//   req.session.destroy();
+//   res.redirect('/');
+// });
+/**
+ * Onsemble RESTFul API
+ *
+ * /api/:userid/discover/ -
+ * /api/:userid -
+ */
+// Get all users
+app.use('/api/users/', function(req, res) {
+  UserSchema.find({}, function(err, result) {
+    if (err) console.log(err);
+    res.json(result);
+  });
+});
+
+// Get specific user
+app.use('/api/:userid/', function(req, res) {
+  var id = req.params.userid;
+  UserSchema.find({
+    _id: id
+  }, function(err, result) {
+    if (err) console.log(err);
+    res.json(result);
+  });
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
