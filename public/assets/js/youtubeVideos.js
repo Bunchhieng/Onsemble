@@ -134,7 +134,7 @@ function requestInfo(VIDEOID, callback) {
             var body = JSON.parse(xmlhttp.responseText);
             callback(body);
         } else {
-            console.log(xmlhttp.statusText, xmlhttp.status);
+            // console.log(xmlhttp.statusText, xmlhttp.status);
         }
     };
 

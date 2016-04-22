@@ -19,6 +19,14 @@ jQuery(function($) {
 		$('#navigation').fadeOut();
 	});
 
+	$('select.div-toggle').change(function() {
+		console.log('here toggle');
+		var target = $(this).data('target');
+		var show = $("option:selected", this).data('show');
+		$(target).children().addClass('hide');
+		$(show).removeClass('hide');
+	});
+
 	// List of discover URL's
 	var boston_urls = ['https://www.youtube.com/embed/V0Gzsdmp3Yc', 'https://www.youtube.com/embed/1s9Xs6wEZHc', 'https://www.youtube.com/embed/CI4TMwFqEgA', 'https://www.youtube.com/embed/NHVE_GEBFwM', 'https://www.youtube.com/embed/0H7aV1XckCo', 'https://www.youtube.com/embed/6h5OgqqSYw4', 'https://www.youtube.com/embed/l0rQFh-dG7s', 'https://www.youtube.com/embed/9c1i7id2zdE', 'https://www.youtube.com/embed/tIx6_Z5v88k'];
 	var lowell_urls = ['https://www.youtube.com/embed/J079e95caB4', 'https://www.youtube.com/embed/jASmF2nsBEI', 'https://www.youtube.com/embed/CnWCF3ND09I', 'https://www.youtube.com/embed/XO1bQ5JSYcY', 'https://www.youtube.com/embed/T-oJCNiiLCQ', 'https://www.youtube.com/embed/S2UfGtHCH2s']
@@ -27,18 +35,14 @@ jQuery(function($) {
 	var streams = {'boston': boston_urls, 'lowell': lowell_urls};
 
 	function setYouTubeTitle(streamName, VIDEOID, id) {
-		console.log('here - title');
-		console.log(streamName+'title'+id);
 	    requestInfo(VIDEOID, function(body) {
-	        document.getElementById(streamName+'title'+id).innerHTML = JSON.stringify(body.items[0].snippet.title);
+	        document.getElementById(streamName+'title'+id).innerHTML = JSON.stringify(body.items[0].snippet.title).replace(/\"/g, "");
 	    });
 	}
 
 	function setYouTubeName(streamName, VIDEOID, id) {
-		console.log('here - name');
-		console.log(streamName+'name'+id);
         requestInfo(VIDEOID, function(body) {
-            document.getElementById(streamName+'name'+id).innerHTML = JSON.stringify(body.items[0].snippet.channelTitle);
+            document.getElementById(streamName+'name'+id).innerHTML = JSON.stringify(body.items[0].snippet.channelTitle).replace(/\"/g, "");
         });
 	}
 	// Need to limit how many layers of a stream are made based on how many
@@ -54,7 +58,6 @@ jQuery(function($) {
 		buildLayer(streamName, '');
 		buildDataSliders(streamName);
 
-		console.log(html.join(""));
 		return html.join("");
 
 		// Builder functions
@@ -124,7 +127,6 @@ jQuery(function($) {
 	        setYouTubeTitle(key, VIDEOID, j);
 	        setYouTubeName(key, VIDEOID, j);
 	        imgFrame(key+"youtube_video"+j, VIDEOID, 340, 240);
-	        console.log('here - placevideo');
 	    }
 	}
 

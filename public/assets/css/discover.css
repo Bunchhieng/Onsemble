@@ -376,6 +376,15 @@ div .caption {
     width: 15px;
 }
 
+.stream1 {
+    padding-top: 130px;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
 
 /* Mobile Only */
 @media (max-width: 767px) {
