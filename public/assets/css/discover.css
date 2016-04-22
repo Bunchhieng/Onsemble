@@ -117,6 +117,10 @@ a:hover .fa {
 *******Home Page CSS******
 **************************/
 
+.hide {
+    display: none;
+}
+
 .col-centered {
     float: none;
     margin: 0 auto;
@@ -306,10 +310,10 @@ h1 {
     font-size: 40pt;
 }
 
-
+/* padding for stream iframes */
 ul.thumbnails { margin-bottom: 0px;}
 
-.thumbnails li> .fff .caption { 
+.thumbnails li> .video-pad .caption { 
     padding:10px
 }
 
