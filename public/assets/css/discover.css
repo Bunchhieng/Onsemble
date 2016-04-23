@@ -384,6 +384,9 @@ div .caption {
     border-radius: 0 !important;
     font-size: 18px;
     line-height: 1.3333333;
+    background-color: rgba(245,245,245, 0.8);
+    color: #2c2f32;
+    /*background: none;*/
 }
 
 /* Mobile Only */
