@@ -79,7 +79,6 @@ function youtubeDiv(parent_div_ID, div_ID, VIDEOID, width, height, start_time, e
 function imgFrame(div_ID, VIDEOID, width, height) {
     start = 32;
     end = 47;
-
     var object = document.createElement('img');
 
     object.id = VIDEOID;

@@ -5,6 +5,6 @@ $(document).ready(function() {
     })
 });
 
-$(document).ready(function() {
-   $('.scroll-down').localScroll({duration:800});
-});
+// $(document).ready(function() {
+//    $('.scroll-down').localScroll({duration:800});
+// });

@@ -1,19 +1,11 @@
 // stream.js
 jQuery(function($) {
 	$('select.div-toggle').change(function() {
-		console.log('here toggle');
 		var target = $(this).data('target');
 		var show = $("option:selected", this).data('show');
 		$(target).children().addClass('hide');
 		$(show).removeClass('hide');
 	});
-
-	// List of discover URL's
-	var boston_urls = ['https://www.youtube.com/embed/V0Gzsdmp3Yc', 'https://www.youtube.com/embed/soAWihvfmR4', 'https://www.youtube.com/embed/CI4TMwFqEgA', 'https://www.youtube.com/embed/e78_3GnH_1I', 'https://www.youtube.com/embed/0H7aV1XckCo', 'https://www.youtube.com/embed/6h5OgqqSYw4', 'https://www.youtube.com/embed/l0rQFh-dG7s', 'https://www.youtube.com/embed/9c1i7id2zdE', 'https://www.youtube.com/embed/tIx6_Z5v88k'];
-	var lowell_urls = ['https://www.youtube.com/embed/J079e95caB4', 'https://www.youtube.com/embed/jASmF2nsBEI', 'https://www.youtube.com/embed/CnWCF3ND09I', 'https://www.youtube.com/embed/XO1bQ5JSYcY', 'https://www.youtube.com/embed/T-oJCNiiLCQ', 'https://www.youtube.com/embed/S2UfGtHCH2s']
-
-	// Dict of discover streams
-	var streams = {'boston': boston_urls, 'lowell': lowell_urls};
 
 	function setYouTubeTitle(streamName, VIDEOID, id) {
 	    requestInfo(VIDEOID, function(body) {
@@ -101,6 +93,8 @@ jQuery(function($) {
 		var key = keys[i];
 		tempStream = buildStream(key, streams[key]);
 		replaceContentInContainer(key, tempStream);
+		var div = document.getElementsByClassName(key)[0];
+		div.innerHTML = '<h2>'+ toTitleCase(key) + '</h2>' + div.innerHTML;
 	}
 
 	// loop through stream names and place appropriate videos where they belong
@@ -113,4 +107,10 @@ jQuery(function($) {
 	        imgFrame(key+"youtube_video"+j, VIDEOID, 340, 240);
 	    }
 	}
+
+	function toTitleCase(str) {
+		str = str.replace(/_/g, " ");
+	    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+	}
+
 });

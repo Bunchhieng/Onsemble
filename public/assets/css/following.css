@@ -116,12 +116,12 @@ a:hover .fa {
     margin: 0 auto;
 }
 
-#discover-page1 .caption {
+#following-page1 .caption {
     font-weight: 600;
     font-size: 18px;
 }
 
-#discover-page1 h2.heading {
+#following-page1 h2.heading {
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -349,7 +349,7 @@ div .caption {
 .control-box {
     text-align: center;
     width: 100%;
-    margin-top:50px;
+    margin-top:20px;
 }
 .carousel-control{
     background: #666;
