@@ -64,6 +64,7 @@ app.get('/', homeController.index);
 app.get('/stage', homeController.stage);
 app.get('/stage/:userid', userController.getUser);
 app.get('/discover', homeController.discover);
+app.get('/following', homeController.following);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
