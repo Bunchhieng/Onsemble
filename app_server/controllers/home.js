@@ -25,17 +25,20 @@ module.exports.stage = function(req, res) {
 }
 
 module.exports.discover = function(req, res) {
-    if (req.user) {
-        res.render('discover', {
-            title: 'Discover',
-            login: true
-        });
-    } else {
-        res.render('discover', {
-            title: 'Discover',
-            login: false
-        });
-    }
+  UserSchema.find({}).limit(1).exec(function(err, data) {
+      console.log(data);
+      if (err) console.log(err);
+      //if (!data) {
+      //    req.flash('errors', {
+      //        msg: 'Invalid user in the database.'
+      //    });
+      //    return res.redirect('/');
+      //}
+      res.render('discover', {
+          user: data,
+          title: "Discover"
+      });
+  })
 }
 
 module.exports.following = function(req, res) {
