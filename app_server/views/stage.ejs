@@ -58,65 +58,48 @@
 
 <div id="stage">
     <!-- Home End-->
-    <section id="stage-profile" class="container-fluid step-on-stage">
-        <div class="col-md-7">
+    <section id="stage-profile" class="container-fluid">
+        <div class="col-md-12">
             <div class="profile-img-container">
-                <% if (user) { %>
-                <img id="pro-pic" src="<%= user[0].profile.picture %>"
-                     class="img-thumbnail img-responsive profile-pic "/>
-                <% } %>
-                <i class="glyphicon glyphicon-camera fa-5x">Update Profile Picture</i>
-            </div>
-            <dl id="profile-info" class="dl-horizontal lead font-white">
-                <dt>Name:</dt>
-                <dd>
-                    <% if (user) { %>
-                    <%= user[0].profile.name %>
-                    <% } %>
-                </dd>
-                <dt>Location:</dt>
-                <dd>
-                    <% if (user) { %>
-                    <%= user[0].profile.location %>
-                    <% } %>
-                </dd>
-                <dt>Followers:</dt>
-                <dd>
-                    <% if (user) { %>
+                <img id="pro-pic" src="/assets/img/team/santi.jpg"
+                     class="img-thumbnail img-responsive profile-pic "/>      
+        </div>
+        <div class="profile-info user-name  text-center col-md-12">
+            Santiago Paredes
+        </div>
+        <div class="profile-info text-center col-md-12">
+         Lowell, MA
+        </div>
+        <div class="profile-info text-center col-md-12">
+         Followers: <% if (user) { %>
                     <%= user[0].profile.followers %>
                     <% } %>
-                </dd>
-                <dt><a href="/following">Followings:</a></dt>
-                <dd>
-                    <% if (user) { %>
+        </div>
+        <div class="profile-info text-center col-md-12">
+         Following: <% if (user) { %>
                     <%= user[0].profile.followings %>
                     <% } %>
-                </dd>
-                <dt>Videos:</dt>
-                <dd>
-                    <% if (user) { %>
-                    <%= user[0].profile.videos.length %>
-                    <% } %>
-                </dd>
-                <button type="button" class="btn btn-info follow">Follow</button>
-            </dl>
         </div>
-        <div id="spotlight" class="col-md-5">
-            <h2 class="spotlight-title text-center font-white">Spotlight</h2>
-            <div class="text-center">
-                <iframe src="https://www.youtube.com/embed/9c1i7id2zdE" width="425" height="250" frameborder="0"
-                        allowfullscreen=""></iframe>
-            </div>
+        <div class="user-description col-md-12">
+        <div class="text-center title-box">
+            I'm a student at UMASS Lowell. My interests have manifested themselves in a number of unique ways and, as a result.
         </div>
+        </div>
+        <div class="col-md-12">
+            <div class="scroll-down text-center">
+                            <a class="btn btn-circle"href="#releases">
+                            <i class="fa fa-angle-double-down animated"></i></a>
+                         </div> 
+                         </div>
     </section>
     <section id="releases" class="container-fluid">
         <div>
             <div class="text-center">
-                <h3 id="recent-releases" class="font-black">Recent Releases</h3>
+                <h3 id="recent-releases" class="font-black"><a class="recent">Recent Releases</a></h3>
                 <div class="container">
                     <hr>
                 </div>
-                <% for(var i = 0; i < 9; i++) { %>
+                <% for(var i = 0; i < 3; i++) { %>
                 <div class="col-lg-4 col-md-4">
                     <iframe src="<%= user[0].profile.videos[i] %>" width="400" height="300" frameborder="0"
                             allowfullscreen=""></iframe>
@@ -129,7 +112,7 @@
         <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
             <div class="social"><a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-facebook"></i></a>
                 <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-twitter"></i></a> <a href="#"
-                                                                                                          class="btn button-onsemble btn-onsemble"><i
+                                                                                                          class="btn butemble"><i
                             class="fa fa-google-plus"></i></a> <a href="#" class="btn button-onsemble btn-onsemble"><i
                             class="fa fa-github"></i></a></div>
         </div>
@@ -142,6 +125,9 @@
 <script src="/assets/js/jquery-1.11.1.js"></script>
 <script src="/assets/js/bootstrap.js"></script>
 <script src="/js/main.js"></script>
+<script src="/assets/js/stage.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+ +<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
 </body>
 
 </html>
