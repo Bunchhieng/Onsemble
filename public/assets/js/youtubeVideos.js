@@ -100,11 +100,17 @@ function imgFrame(div_ID, VIDEOID, width, height) {
     // append image to div
     $("#"+div_ID).append(object);
 
+    var timer;
     // hover on image to play video
     object.onmouseover = function() {
-        object.remove();
-        youtubeDiv("#iframe_"+div_ID, div_ID, VIDEOID, width, height, start, end);
+        timer = setTimeout(function() {
+            object.remove();
+            youtubeDiv("#iframe_"+div_ID, div_ID, VIDEOID, width, height, start, end);
+        }, 500);
     };
+    object.onmouseout = function() {
+        clearTimeout(timer);
+    }
 }
 
 /* Return the url of youtube informations with this videoId */
