@@ -58,6 +58,7 @@ body {
     background: url('../img/guitar-wallpaper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 ul {

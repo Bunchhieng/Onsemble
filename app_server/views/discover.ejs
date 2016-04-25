@@ -30,8 +30,8 @@
         <link href="/assets/css/discover.css" rel="stylesheet" type="text/css">
         <!--JS-->
         <script src="/assets/js/jquery-1.11.1.js" type="text/javascript"></script>
-        <script src="/assets/js/stream.js" type="text/javascript"></script>
         <script src="/assets/js/discover.js" type="text/javascript"></script>
+        <script src="/assets/js/stream.js" type="text/javascript"></script>
         <script src="https://www.youtube.com/iframe_api" type='text/javascript'></script>
         <script src="/assets/js/youtubeVideos.js" type="text/javascript"></script>
     </head>
@@ -54,6 +54,9 @@
                             <a href="/discover/">DISCOVER</a>
                         </li>
                         <li>
+                            <a href="/following/">FOLLOWING</a>
+                        </li>
+                        <li>
                             <a href="/stage/">STAGE</a>
                         </li>
                         <!--<li>
@@ -70,16 +73,18 @@
                 </h2>
             </div>
             <div class="col-xs-12 tab-content">
-                <div class="col-md-4 col-md-offset-4">
-                    <select class="div-toggle form-control"data-target=".stream1">
+                <div id="stream_menu" class="col-md-4 col-md-offset-4">
+                    <select id="menu" class="div-toggle form-control"data-target=".stream1">
                       <option value="">Select a stream...</option>
-                      <option value="boston" data-show=".boston">Trending Now (in Boston)</option>
-                      <option value="lowell" data-show=".lowell">Top Acoustic (in Lowell)</option>
+                      <option value="trending_now_-_in_boston" data-show=".trending_now_-_in_boston">Trending Now - In Boston</option>
+                      <option value="top_acoustic_music_-_in_lowell" data-show=".top_acoustic_music_-_in_lowell">Top Acoustic Music - In Lowell</option>
                     </select>
                 </div>
-                <div class="stream1">
-                  <div class="boston hide"></div>
-                  <div class="lowell hide"></div>
+                <div id="streams">
+                    <div class="stream1">
+                      <div class="trending_now_-_in_boston hide"></div>
+                      <div class="top_acoustic_music_-_in_lowell hide"></div>
+                    </div>
                 </div>
             </div>
         </section>
