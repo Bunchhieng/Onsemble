@@ -7,6 +7,8 @@ var streams = {
 }
 var stream_holders = ['stream1'];
 
+var following = false;
+
 // function changeStream() {
 // 	var selection = document.getElementById('menu');
 // 	var selectedValue = selection.options[selection.selectedIndex].value;

@@ -1,6 +1,6 @@
 // stream.js
-jQuery(function($) {
 
+jQuery(function($) {
 
 	function setYouTubeTitle(streamName, VIDEOID, id) {
 	    requestInfo(VIDEOID, function(body) {
@@ -88,8 +88,10 @@ jQuery(function($) {
 		var key = keys[i];
 		tempStream = buildStream(key, streams[key]);
 		replaceContentInContainer(key, tempStream);
-		var div = document.getElementsByClassName(key)[0]; // Add the title name above the stream
-		div.innerHTML = '<h2>'+ toTitleCase(key) + '</h2>' + div.innerHTML;
+		if (following) {
+			var div = document.getElementsByClassName(key)[0]; // Add the title name above the stream
+			div.innerHTML = '<h2>'+ toTitleCase(key) + '</h2>' + div.innerHTML;
+		}
 	}
 
 	// loop through stream names and place appropriate videos where they belong
