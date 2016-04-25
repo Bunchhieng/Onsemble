@@ -27,6 +27,7 @@ section {
 .title-box {
     padding-top: 10px;
     padding-bottom: 10px;
+<<<<<<< HEAD
     /*    -webkit-border-radius: 10px;
         -moz-border-radius: 10px;*/
     border-radius: 10px;
@@ -35,11 +36,17 @@ section {
     margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+=======
+>>>>>>> jnn_v10
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.8);
+<<<<<<< HEAD
     padding-left: 50px;
+=======
+    padding-left: 15px;
+>>>>>>> jnn_v10
     margin-top: 20px;
 }
 

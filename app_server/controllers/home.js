@@ -37,3 +37,9 @@ module.exports.discover = function(req, res) {
         });
     }
 }
+
+module.exports.following = function(req, res) {
+    res.render('following', {
+        title: 'Following'
+    });
+}
