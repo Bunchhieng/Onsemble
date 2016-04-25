@@ -4,6 +4,8 @@ var lowell_urls = ['https://www.youtube.com/embed/WJkItLf3XqE', 'https://www.you
 var streams = {'trending_now_-_in_boston': boston_urls, 'top_acoustic_music_-_in_lowell': lowell_urls}
 var stream_holders = ['stream1'];
 
+var following = false;
+
 // function changeStream() {
 // 	var selection = document.getElementById('menu');
 // 	var selectedValue = selection.options[selection.selectedIndex].value;

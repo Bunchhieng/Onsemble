@@ -3,3 +3,5 @@ var tori_kelly_urls = ['https://www.youtube.com/embed/AvqDgFmETY4', 'https://www
 
 // Dict of following streams
 var streams = {'alex_serra': alex_serra_urls, 'tori_kelly': tori_kelly_urls};
+
+var following = true;
