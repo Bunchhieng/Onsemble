@@ -65,3 +65,4 @@ process.on('SIGTERM', function() {
 
 // Bring in schema and model User
 require('./User');
+require('./discoverDB.js');
