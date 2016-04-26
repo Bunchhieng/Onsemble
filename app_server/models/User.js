@@ -83,3 +83,30 @@ UserSchema.methods.generateJwt = function() {
 
 // Export this model as public
 module.exports = mongoose.model('User', UserSchema);
+var User = mongoose.model('User', UserSchema);
+User.findOne({username: "santi"}, function(err, exist) {
+  if(exist) {
+    return;
+  }
+  var Santi = new User({
+      username: "santi",
+      email: "santi@gmail.com",
+      profile: {
+          name: "Santiago Paredes",
+          gender: "Male",
+          videos: [
+              "https://www.youtube.com/embed/9c1i7id2zdE",
+              "https://www.youtube.com/embed/CnWCF3ND09I",
+              "https://www.youtube.com/embed/K7k-TmIl3yk"
+          ],
+          picture: "https://pbs.twimg.com/profile_images/644166746430156800/jGhM-iiv.jpg",
+          location: "Lowell, MA",
+          followers: 9323843,
+          followings: 10
+      }
+  });
+
+  Santi.save(function(err) {
+      if (err) console.log(err);
+  });
+});
