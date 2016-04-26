@@ -6,11 +6,11 @@ var sf_urls = ['https://www.youtube.com/embed/ZQNPiOn_1jw', 'https://www.youtube
 var onsemble_urls = ['https://www.youtube.com/embed/uJXgJ2TGPXg', 'https://www.youtube.com/embed/nsSCl8UXlrY', 'https://www.youtube.com/embed/hos6QhJ9a_U', 'https://www.youtube.com/embed/6OtzUfSYiQ8', 'https://www.youtube.com/embed/Jnm4UMEQFyc', 'https://www.youtube.com/embed/rDWuqrJAyGw']
 
 var streams = {
+    'featured_artist': onsemble_urls,
     'top_acoustic_music_-_in_lowell': lowell_urls,
     'top_indie_music_-_in_new_york': ny_urls,
     'top_country_music_-_in_san_fransisco': sf_urls,
-    'trending_now_-_in_boston': boston_urls,
-    'featured_artist': onsemble_urls
+    'trending_now_-_in_boston': boston_urls
 }
 var stream_keys = Object.keys(streams);
 
@@ -22,19 +22,6 @@ jQuery(function($) {
     var preloader = $('.preloader');
     $(window).load(function() {
         preloader.remove();
-    });
-
-    // Menu
-    $('#header .nav-button').on('click', function() {
-        $('#navigation').fadeIn();
-    });
-
-    $('#hidemenu').on('click', function() {
-        $('#navigation').fadeOut();
-    });
-
-    $('.main-nav ul li a').on('click', function() {
-        $('#navigation').fadeOut();
     });
 
 	stream_menu_element = document.getElementById('stream_table');
@@ -49,15 +36,16 @@ jQuery(function($) {
     function buildStreamTable(stream_keys) {
         var html = [];
         var current = 'current'; // default tab activation
+        var feat = 0;
 
         buildTabs(stream_keys);
         buildTable(stream_keys);
         return html.join("");
 
         function buildTabs(stream_keys) {
-            html.push('<ul class="tabs">');
+            html.push('<ul class="tabs" style="margin-left:25px">');
             for (var i = 0; i < stream_keys.length; i++) {
-                buildTab(i, ((i == 0) ? current : ''));
+                buildTab(i, ((i == feat) ? current : ''));
             }
             html.push('</ul>');
 
@@ -68,7 +56,7 @@ jQuery(function($) {
 
         function buildTable(stream_keys) {
             for (var i = 0; i < stream_keys.length; i++) {
-                buildRow(i, ((i == 0) ? current : '')); // i love hook colon operator! Literally the only thing javascript has going for it
+                buildRow(i, ((i == feat) ? current : '')); // i love hook colon operator! Literally the only thing javascript has going for it
                 html.push('<div class="row">');
                 html.push('<div id="'+ stream_keys[i] +'"></div>');
                 html.push('</div>');
@@ -103,11 +91,11 @@ jQuery(function($) {
         var tab_id = $(this).attr('data-tab');
 
         $('ul.tabs li').removeClass('current');
-        $('.tab-content').fadeOut('slow', function() {});
+        // $('.tab-content').fadeOut('slow', function() {});
         $('.tab-content').removeClass('current');
 
         $(this).addClass('current');
         $("#" + tab_id).addClass('current');
-        $("#" + tab_id).fadeIn('slow', function() {});
+        // $("#" + tab_id).fadeIn('slow', function() {});
     }));
 });
