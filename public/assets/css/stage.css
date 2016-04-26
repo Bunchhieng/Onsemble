@@ -216,9 +216,4 @@ dl {
     }
 }
 
-/* places the btn-circle towards the bottom/middle of the section */
-.extra-pad {
-    padding-top: 200px;
-}
-
 a {text-decoration: none; }

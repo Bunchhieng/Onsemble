@@ -98,16 +98,14 @@ module.exports.postUpload = function(req, res) {
     if (!req.body.youtubeLink) {
         res.redirect('/upload');
     }
-    console.log(req.body.youtubeLink);
-    User.collection.update({
+    User.update({
         "username": "santi"
     }, {
         $push: {
             "profile.videos": req.body.youtubeLink
         }
     }, {
-        safe: true,
-        upsert: true
+        safe: true
     }, function(err, data) {
         if (err) console.log(err);
         console.log(data);
