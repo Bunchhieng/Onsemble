@@ -38,7 +38,7 @@ module.exports.discover = function(req, res) {
           user: data,
           title: "Discover"
       });
-  })
+  });
 }
 
 module.exports.following = function(req, res) {
@@ -46,3 +46,5 @@ module.exports.following = function(req, res) {
         title: 'Following'
     });
 }
+
+
