@@ -127,9 +127,6 @@ dl {
     margin: 0 auto;
 }
 
-.scroll-down-btn {
-    background: #1CB94E
-}
 
 .user-description {
     margin: 0;
@@ -141,6 +138,8 @@ dl {
 .user-name {
     font-size: 35px;
 }
+
+
 
 /*Button to scroll to the next section*/
 .btn-circle {
