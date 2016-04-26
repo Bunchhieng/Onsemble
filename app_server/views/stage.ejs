@@ -32,7 +32,6 @@
 </head>
 
 <body data-spy="scroll" data-target=".btn" data-offset="50">
-<<<<<<< HEAD
 <!-- Navigation Bar-->
 <div id="menu-section" class="navbar navbar-inverse navbar-fixed-top scroll-me">
     <div class="container">
@@ -50,29 +49,9 @@
                 <li><a class="page-scroll" href="#stage-profile">STAGE</a></li>
                 <li><a href="/logout/">LOG OUT</a></li>
             </ul>
-=======
-    <!-- Navigation Bar-->
-    <div id="menu-section" class="navbar navbar-inverse navbar-fixed-top scroll-me">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-                <a href="/" class="pull-left"><img src="/assets/img/Onsemble.png" class="navbar-logo"></a>
-                <p class="nav navbar-text nav-logo"><span style="color: #439756">n</span>semble</p>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/upload/">UPLOAD</a></li>
-                    <li><a href="/discover/">DISCOVER</a></li>
-                    <li><a href="/following/">FOLLOWING</a></li>
-                    <li><a href="/stage/">STAGE</a></li>
-                    <li><a href="/logout/">LOG OUT</a></li>
-                </ul>
-            </div>
->>>>>>> origin/master
         </div>
     </div>
 
-<<<<<<< HEAD
 <div id='main-content'>
 <div id="stage">
     <!-- Home End-->
@@ -125,66 +104,6 @@
                 <div class="col-lg-4 col-md-4">
                     <iframe src="https://www.youtube.com/embed/9c1i7id2zdE" width="400" height="300" frameborder="0"
                             allowfullscreen=""></iframe>
-=======
-    <div id='main-content'>
-        <div id="stage">
-            <!-- Home End-->
-            <section id="stage-profile" class="container-fluid">
-                <div class="col-md-12">
-                    <div class="profile-img-container">
-                        <img id="pro-pic" src="/assets/img/team/santi.jpg" class="" />
-                    </div>
-                    <div class="profile-info user-name  text-center col-md-12">
-                        Santiago Paredes
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <div class="social">
-                            <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-github"></i></a>
-                        </div>
-                    </div>
-                    <div class="profile-info text-center col-md-12">
-                        Lowell, MA
-                    </div>
-                    <div class="profile-info text-center col-md-12">
-                        Followers:
-                        <% if (user) { %>
-                            <%= user[0].profile.followers %>
-                                <% } %>
-                    </div>
-                    <div class="profile-info text-center col-md-12">
-                        <a href="/following">Following:</a>
-                        <% if (user) { %>
-                           <%= user[0].profile.followings %>
-                                <% } %>
-                    </div>
-                    <div class="user-description col-md-12">
-                        <div class="text-center title-box">
-                            I'm a student at UMass Lowell. I perform regularly in Boston and in the Cambridge area. I've done tons of street performing in Quincy Market.
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="scroll-down text-center">
-                            <a class="btn btn-circle" href="#releases"><i class="fa fa-angle-double-down animated"></i></a>
-                        </div>
-                    </div>
-            </section>
-            <section class="recent" id="releases" class="container-fluid">
-                <div class="text-center">
-                    <h3 id="recent-releases" class="font-black">Recent Releases</h3>
-                    <div class="pad-bottom container">
-                        <hr>
-                    </div>
-                    <div class="row">
-                        <% for(var i = 0; i < user[0].profile.videos.length; i++) {%>
-                            <div class="col-lg-4 col-md-4">
-                                <iframe src="<%= user[0].profile.videos[i] %>" width="400" height="300" frameborder="0" allowfullscreen=""></iframe>
-                            </div>
-                            <% } %>
-                    </div>
->>>>>>> origin/master
                 </div>
             </section>
             </div>
