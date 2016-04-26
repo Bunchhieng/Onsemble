@@ -34,7 +34,7 @@
     <link href="/assets/css/stage.css" rel="stylesheet" type="text/css"/>
 </head>
 
-<body data-spy="scroll" data-target="#menu-section">
+<body data-spy="scroll" data-target=".btn" data-offset="50">
 <!-- Navigation Bar-->
 <div id="menu-section" class="navbar navbar-inverse navbar-fixed-top scroll-me">
     <div class="container">
@@ -67,6 +67,14 @@
         <div class="profile-info user-name  text-center col-md-12">
             Santiago Paredes
         </div>
+        <div class="col-md-12 text-center">
+            <div class="social"><a href="#" class="btn button-onsemble btn-onsemble">
+            <i class="fa fa-facebook"></i></a>
+                <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-twitter"></i></a> <a href="#"
+                                                                                                          class="btn btn-onsemble"><i
+                            class="fa fa-google-plus"></i></a> <a href="#" class="btn button-onsemble btn-onsemble"><i
+                            class="fa fa-github"></i></a></div>
+        </div>
         <div class="profile-info text-center col-md-12">
          Lowell, MA
         </div>
@@ -82,7 +90,7 @@
         </div>
         <div class="user-description col-md-12">
         <div class="text-center title-box">
-            I'm a student at UMASS Lowell. My interests have manifested themselves in a number of unique ways and, as a result.
+            I'm a student at UMass Lowell. I perform regularly in Boston and in the Cambridge area. I've done tons of street performing in Quincy Market.
         </div>
         </div>
         <div class="col-md-12">
@@ -92,33 +100,28 @@
                          </div> 
                          </div>
     </section>
-    <section id="releases" class="container-fluid">
-        <div>
+    <section class="recent" id="releases" class="container-fluid">
             <div class="text-center">
-                <h3 id="recent-releases" class="font-black"><a class="recent">Recent Releases</a></h3>
-                <div class="container">
+                <h3 id="recent-releases" class="font-black">Recent Releases</h3>
+                <div class="pad-bottom container">
                     <hr>
                 </div>
-                <% for(var i = 0; i < 3; i++) { %>
                 <div class="col-lg-4 col-md-4">
-                    <iframe src="<%= user[0].profile.videos[i] %>" width="400" height="300" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/9c1i7id2zdE" width="400" height="300" frameborder="0"
                             allowfullscreen=""></iframe>
                 </div>
-                <% } %>
+                 <div class="col-lg-4 col-md-4">
+                    <iframe src="https://www.youtube.com/embed/CnWCF3ND09I" width="400" height="300" frameborder="0"
+                            allowfullscreen=""></iframe>
+                </div>
+                 <div class="col-lg-4 col-md-4">
+                    <iframe src="https://www.youtube.com/embed/K7k-TmIl3yk" width="400" height="300" frameborder="0"
+                            allowfullscreen=""></iframe>
+                </div>
+
             </div>
-        </div>
     </section>
-    <div class="container-fluid bg-blk">
-        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
-            <div class="social"><a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="btn button-onsemble btn-onsemble"><i class="fa fa-twitter"></i></a> <a href="#"
-                                                                                                          class="btn butemble"><i
-                            class="fa fa-google-plus"></i></a> <a href="#" class="btn button-onsemble btn-onsemble"><i
-                            class="fa fa-github"></i></a></div>
-        </div>
-    </div>
-</div>
-</div>
+
 <script src="/assets/js/jquery-1.11.1.js"></script>
 <script src="/assets/js/bootstrap.js"></script>
 <script src="/assets/js/main.js"></script>
