@@ -72,6 +72,7 @@ app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
 app.get('/upload', userController.getUpload);
+app.post('/upload', userController.postUpload);
 app.get('/forgot', userController.getForgot);
 app.post('/register', userController.register);
 
