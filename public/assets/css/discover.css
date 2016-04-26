@@ -421,11 +421,33 @@ ul.tabs li{
     display: inline-block;
     padding: 10px 15px;
     cursor: pointer;
+
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    margin: 25px 5px 5px 0px;
+    margin: 5px;
 }
 
-ul.tabs li.current{
-    background: #435796;
-    color: #222;
+ul.tabs li {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #439756;
+}
+
+ul.tabs li.current {
+    background-color: #439756;
+    border: 2px solid #439756;
+}
+
+ul.tabs li:hover {
+    background-color: #439756;
+    text-decoration: none;
+    color: #fff;
 }
 
 .tab-content{
@@ -436,3 +458,42 @@ ul.tabs li.current{
 .tab-content.current{
     display: inherit;
 }
+
+/*
+ul.tabs li {
+border-radius: 0px;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+margin: 25px 5px 5px 0px;
+margin: 5px;
+}
+
+.btn-custom-one {
+background-color: transparent;
+color: #fff;
+border: 2px solid rgb(57, 171, 111);
+}
+
+.btn-custom-one:hover {
+background-color: rgb(57, 171, 111);
+text-decoration: none;
+color: #fff;
+}
+
+.btn-custom-two {
+color: #fff;
+background-color: rgb(57, 171, 111);
+border: 2px solid rgb(57, 171, 111);
+}
+
+.btn-custom-two:hover {
+border: 2px solid rgb(57, 171, 111);
+text-decoration: none;
+color: #fff;
+background-color: transparent;
+}
+*/

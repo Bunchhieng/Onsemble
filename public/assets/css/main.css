@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 
-/* FREE GOOGLE FONT */
+div#main-content { display: none; }
 
 html, body {
     font-family: 'Josefins Sans', sans-serif;
