@@ -136,6 +136,9 @@ jQuery(function($) {
         $("#" + tab_id).addClass('current');
         $("#" + tab_id).fadeIn('slow', function() {});
     }));
+    // $('.tabs').on('click', (function() {
+    //     $('.tabs').tabs({show: 'fade', hide: 'fade'});
+    // }
 
     // $('.tabs').tabs().bind('change', function (e) {
     //         $(this).next().hide().fadeIn();
