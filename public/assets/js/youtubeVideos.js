@@ -1,6 +1,18 @@
 /*****************************************************************************
  * Notice some function might not be used.
  ****************************************************************************/
+jQuery(document).ready(function($){
+    var cssLink = $("<link rel='stylesheet' type='text/css' href='https://cdn.rawgit.com/daneden/animate.css/master/animate.css'>");
+    $("head").append(cssLink);
+    var cssLink2 = $("<link rel='stylesheet' type='text/css' href='https://cdn.rawgit.com/IanLunn/Hover/master/css/hover.css'>");
+    $("head").append(cssLink2);
+    var cssLink3 = $("<link rel='stylesheet' type='text/css' href='https://cdn.rawgit.com/elrumordelaluz/csshake/master/dist/csshake.css'>");
+    $("head").append(cssLink3);
+    var jsLink = $("<script type='text/javascript' src='https://www.youtube.com/iframe_api'>");
+    $("head").append(jsLink); 
+    $(".tab-link").addClass("hvr-bounce-to-bottom hvr-hang");
+    $(".btn-circle").addClass("shake-slow shake-little shake-constant shake-constant--hover");
+});
 
 /* This function require a YouTube url and return a YouTube video ID */
 function youtube_parser(url) {
@@ -14,6 +26,7 @@ function youtube_parser(url) {
  *    It ONLY works with id.
  */
 function youtubeDiv(parent_div_ID, div_ID, VIDEOID, width, height, start_time, end_time) {
+
     // create and replace div_ID to iframe with parameters
     var player = new YT.Player(div_ID, {
         width: width,
@@ -48,15 +61,14 @@ function youtubeDiv(parent_div_ID, div_ID, VIDEOID, width, height, start_time, e
     // pauseVideo() or playVideo() will only works inside these functions
     function onPlayerReady(event) {
         // console.log("onPlayerReady");
-
         player.playVideo();
         // if the mouse is out of frame before player is ready.
         if(OutOfFrameBeforeReady) {
             // load in the first 100 milliseconds of video instead of a
-            // continuous loading circle icon
+            // continuous circularly loading icon
             setTimeout(function() {
                 player.pauseVideo();
-            }, 100);
+            }, 500);
         }
 
         // on hover
@@ -99,13 +111,19 @@ function imgFrame(div_ID, VIDEOID, width, height) {
 
     // append image to div
     $("#"+div_ID).append(object);
+    
+    // add animations
+    $('#'+VIDEOID).addClass('animated rubberBand');
 
     var timer;
     // hover on image to play video
     object.onmouseover = function() {
         timer = setTimeout(function() {
-            object.remove();
-            youtubeDiv("#iframe_"+div_ID, div_ID, VIDEOID, width, height, start, end);
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            $('#'+VIDEOID).addClass('animated bounceOut').one(animationEnd, function() {
+                object.remove();
+                youtubeDiv("#iframe_"+div_ID, div_ID, VIDEOID, width, height, start, end);
+            });
         }, 500);
     };
     object.onmouseout = function() {
