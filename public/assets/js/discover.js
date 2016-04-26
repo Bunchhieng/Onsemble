@@ -16,18 +16,6 @@ var stream_keys = Object.keys(streams);
 
 var following = false;
 
-// function changeStream() {
-// 	var selection = document.getElementById('menu');
-// 	var selectedValue = selection.options[selection.selectedIndex].value;
-// 	// alert(selectedValue);
-// 	$(selection).change(function() {
-// 		var target = $(this).data('target');
-// 		var show = $("option:selected", this).data('show');
-// 		$(target).children().addClass('hide');
-// 		$(show).removeClass('hide');
-// 	});
-// }
-
 jQuery(function($) {
 
     //Preloader
@@ -58,23 +46,9 @@ jQuery(function($) {
         $(stream_element).replaceWith(buildDiscoverStreams(stream_keys[i]));
     }
 
-    // $(document).on('input', 'select.div-toggle', function (){
-    // 	var target = $(this).data('target');
-    // 	var show = $("option:selected", this).data('show');
-    // 	$(target).children().addClass('hide');
-    // 	$(show).removeClass('hide');
-    // });
-
-    // $('select.div-toggle').change(function() {
-    //     var target = $(this).data('target');
-    //     var show = $("option:selected", this).data('show');
-    //     $(target).children().addClass('hide');
-    //     $(show).removeClass('hide');
-    // });
-
     function buildStreamTable(stream_keys) {
         var html = [];
-        var current = ''; // default tab activation
+        var current = 'current'; // default tab activation
 
         buildTabs(stream_keys);
         buildTable(stream_keys);
@@ -136,11 +110,4 @@ jQuery(function($) {
         $("#" + tab_id).addClass('current');
         $("#" + tab_id).fadeIn('slow', function() {});
     }));
-    // $('.tabs').on('click', (function() {
-    //     $('.tabs').tabs({show: 'fade', hide: 'fade'});
-    // }
-
-    // $('.tabs').tabs().bind('change', function (e) {
-    //         $(this).next().hide().fadeIn();
-    // });
 });
