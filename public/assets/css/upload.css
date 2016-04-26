@@ -1,0 +1,57 @@
+section#upload {
+	background-color:#222;
+	background-image:url(../img/map-image.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	height: 100vh;
+}
+
+section#upload .section-heading {
+	color:#fff
+}
+section#upload .form-group {
+	margin-bottom:25px
+}
+section#upload .form-group input,section#upload .form-group textarea{
+	padding:20px
+}
+section#upload .form-group input.form-control {
+	height:auto
+}
+section#upload .form-group textarea.form-control {
+	height:236px
+}
+section#upload .form-control:focus {
+	border-color:#fed136;box-shadow:none
+}
+section#upload ::-webkit-input-placeholder {
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#bbb
+	}
+section#upload :-moz-placeholder {
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#bbb
+	}
+section#upload ::-moz-placeholder {
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#bbb
+	}
+section#upload :-ms-input-placeholder {
+	font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#bbb
+}
+section#upload .text-danger{
+	color:#e74c3c
+}
+
+#upload {
+	padding-top: 110px;
+}
