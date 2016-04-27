@@ -79,19 +79,20 @@
              Followers: <% if (user) { %>
                         <%= user[0].profile.followers %>
                         <% } %>
-            </div>
+        </div>
         <div class="profile-info text-center col-md-12">
-             Following: <% if (user) { %>
-                        <%= user[0].profile.followings %>
-                        <% } %>
-            </div>
+             Videos: 3
+        </div>
+        <div class="profile-info text-center col-md-12">
+             <a href="/following">Following:</a> 2
+        </div>
         <div class="user-description col-md-12">
             <div class="text-center title-box">
                 I'm a student at UMass Lowell. I perform regularly in Boston and in the Cambridge area. I've done tons of street performing in Quincy Market.
             </div>
         </div>
         <div class="col-md-12">
-            <div class="scroll-down text-center extra-pad">
+            <div class="scroll-down text-center extra-pad bottom">
                             <a class="btn btn-circle" href="#releases"><i class="fa fa-angle-double-down animated"></i></a>
             </div> 
         </div>
@@ -103,7 +104,7 @@
                     <hr>
                 </div>
                  <div class="row">
-                        <% for(var i = user[0].profile.videos.length -1 ; i > 0; i--) {%>
+                        <% for(var i = user[0].profile.videos.length - 1; i > user[0].profile.videos.length - 4; i--) {%>
                             <div class="col-lg-4 col-md-4">
                                 <iframe src="<%= user[0].profile.videos[i] %>" width="400" height="300" frameborder="0" allowfullscreen=""></iframe>
                             </div>
