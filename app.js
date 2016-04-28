@@ -38,7 +38,7 @@ app.use(session({
     saveUninitialized: true,
     secret: process.env.SESSION_SECRET,
     store: new MongoStore({
-        url: "mongodb://localhost:27017/onsemble" || process.env.MONGOLAB_URI,
+        url: process.env.MONGOLAB_URI,
         autoReconnect: true
     })
 }));
