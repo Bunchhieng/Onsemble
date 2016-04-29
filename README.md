@@ -1,5 +1,7 @@
 # Onsemble
-Onsemble is concept that was inspired by a team member's desire to create an environment where artists could connect with potential local fans by showcasing their material in "video streams" separated by geographical strata. Onsemble, therefore, is a promotional platform where undiscovered musicians can showcase their work to people in their surrounding communities and hope to be discovered.
+Onsemble is concept that was inspired by a team member's desire to create an environment where artists could connect with potential local fans by showcasing their material in "video streams" separated by geographical strata. 
+
+Onsemble, therefore, is a promotional platform where undiscovered musicians can showcase their work to people in their surrounding communities and hope to be discovered.
 
 The current version of the app can be found here:
 https://onsembleapp.herokuapp.com/
