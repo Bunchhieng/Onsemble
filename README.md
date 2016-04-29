@@ -1,11 +1,11 @@
 # Onsemble
-Onsemble is a promotional platform where undiscovered musicians can showcase their work to people in their surrounding communities and hope to be discovered.
+Onsemble is concept that was inspired by a team member's desire to create an environment where artists could connect with potential local fans by showcasing their material in "video streams" separated by geographical strata. Onsemble, therefore, is a promotional platform where undiscovered musicians can showcase their work to people in their surrounding communities and hope to be discovered.
 
-The current version of this repository can be found here:
+The current version of the app can be found here:
 https://onsembleapp.herokuapp.com/
 
 ##Communication with the team
-This is where our communication of code will be taking place.
+This is where our communication over development will be taking place.
 [![Gitter](https://badges.gitter.im/Bunchhieng/Onsemble.svg)](https://gitter.im/Bunchhieng/Onsemble?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## How to work on this project
@@ -16,7 +16,7 @@ This is where our communication of code will be taking place.
 
 ## Easy team workflow
 #### **Please make sure you read this instruction before you push any changes.**
-1. Clone the base project:             
+1. Clone the base project:         
 `git clone https://github.com/Bunchhieng/Onsemble.git`
 2. Make sure you create a new branch (based on development/master branch) every time you want to push a new fix or update. This won't be conflicted with everyone:                       
 `git checkout -b your_branch master`                            
@@ -47,9 +47,11 @@ git push
 ## Timeline
 Assignment # | Due date | Status | Person in charge
 ------------ | ------------- | ------------- | -------------
-1. Proposal | Thursday, February 4, 2016 | Progressing | everyone
-2. UI | Tuesday, February 12, 2016 | Progressing | Santiago and Justin
-3. Database model | Tuesday, February 16, 2016| Progressing | Bun and Tak
-4. Alpha version | Tuesday, March 1, 2016 | Progressing | everyone
-5. Beta version | Tuesday, April 5, 2016 | Progressing | everyone
-6. Bug fixes | Saturday, April 27| Progressing | everyone
+1. Proposal | Thursday, February 4, 2016 | Complete | everyone
+2. UI | Tuesday, February 12, 2016 | Complete | Santiago and Justin
+3. Database model | Tuesday, February 16, 2016| Complete | Bun and Tak
+4. Alpha version | Tuesday, March 1, 2016 | Complete | everyone
+5. Beta version | Tuesday, April 5, 2016 | Incomplete | everyone
+6. Bug fixes | Saturday, April 27| Complete | everyone
+
+Note: Since April 28, 2016, the beta version of Onsemble is missing a few features promised in the proposal.  Therefore, it is considered incomplete.
